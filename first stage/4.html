@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+html{
+  font-size:10px;  
+}
+
+#main{
+  width:40rem;
+  height:20rem;
+  background-color:#ccc;
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin:-10rem 0 0 -20rem;
+}
+/*
+#main{
+  width:40rem;
+  height:20rem;
+  background-color:#ccc;
+  margin: auto;  
+  position: absolute;  
+  top: 0; left: 0; bottom: 0; right: 0; 
+}
+*/
+.yellow{
+  background-color:#fc0;
+}
+.left,.right{
+  width:5rem;
+  height:5rem;
+}
+.left{
+  border-radius:0 0 5rem 0;
+}
+.right{
+  border-radius:5rem 0 0 0;
+  position:relative;
+  left:35rem;
+  top:10rem;
+}
+</style>
+<body>
+	<div id='main'>
+			<div class='yellow left'></div>
+			<div class='yellow right'></div>
+	</div>
+</body>
+</html>

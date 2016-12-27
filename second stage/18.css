@@ -1,0 +1,20 @@
+html{
+  font-size:16px;
+}
+input{
+  width:10rem;
+}
+button{
+  border:1px solid #ccc;
+  border-radius:0.2rem;
+}
+.box{
+  width:4rem;
+  height:4rem;
+  background-color:red;
+  margin:1rem;
+  display:inline-block;
+}
+.box>p{
+  text-align:center;
+}
