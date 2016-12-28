@@ -22,15 +22,32 @@ function getVal(){
     return false;
   }
 }
-function left(){
+function add(i){
   var queue = document.getElementById('queue');
   var box = document.createElement('div');
   box.setAttribute('class','box');
   var p = document.createElement('p');
   var num = getVal();
   p.innerHTML = num;
+  box.appendChild(p);
+  console.log(i);
   if(typeof(num)==='number'){
-    box.appendChild(p);
-    queue.appendChild(box);
+    if(i==1){
+      queue.appendChild(box);
+    }
+    else{
+      queue.insertBefore(box,queue.firstChild);
+    }
   }
+}
+function pop(i){
+  var queue = document.getElementById('queue');
+  var box
+  if(i==0){
+    box = queue.firstChild;
+  }
+  else{
+    box = queue.lastChild;
+  }
+  queue.removeChild(box);
 }

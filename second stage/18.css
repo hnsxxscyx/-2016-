@@ -17,4 +17,5 @@ button{
 }
 .box>p{
   text-align:center;
+  line-height:2rem;//因为.box成了inline-block
 }
