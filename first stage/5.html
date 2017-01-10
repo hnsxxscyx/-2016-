@@ -129,39 +129,49 @@
 		</div>
 		<div class="sidebar">
 			<div>
-			<h1>这是侧栏的标题</h1>
-			<h1>注册窗口标题</h1>
-			<label for="">邮箱地址：</label>
-			<input type="text" placeholder="这是一个文本框">
-			<p>邮箱地址请按格式输入</p>
-			<label for="">请输入密码</label>
-			<input type="text" placeholder="又是一个文本框">
-			<label for="">请重复密码</label>
-			<input type="text" placeholder="这是一个文本框">
-			<p>密码为6-16位英文数字</p>
+			<h3>这是侧栏的标题</h3>
 			<form action="" >
-				<label for="">性别：</label>
-				<input type="radio" id="man">
-				<label for="">男</label>
-				<input type="radio" id="woman">
-				<label for="">女</label>
-				<select name="" id="">
+				<div id='login'>
+				<label for="eMail">请输入邮箱地址：</label>
+				<input type="text" placeholder="这是一个文本框" id="eMail">
+				<p>邮箱地址请按格式输入</p>
+				<label for="password">请输入密码</label>
+				<input type="text" placeholder="又是一个文本框" id="password">
+				<label for="repassword">请重复密码</label>
+				<input type="text" placeholder="这是一个文本框" id="repassword">
+				<p>密码为6-16位英文数字</p>
+				</div>
+				<div class="other">
+				<p>性别：</p>
+				<label for="man">男</label>
+				<input type="radio" name="gender" id="man" />
+				<label for="woman">女</label>
+				<input type="radio" name="gender" id="woman" />
+				</div>
+				<div class="other">
+				<p>城市</p>
+				<select name="address" id="city">
 					<option value="北京">北京</option>
 					<option value="上海">上海</option>
 					<option value="广州">广州</option>
 					<option value="深圳">深圳</option>
 				</select>
-				<label for="">爱好:</label>
-				<input type="checkbox" id="1">
+				</div>
+				<div class="other">
+				<p>爱好:</p>
 				<label for="1">运动</label>
-				<input type="checkbox" id="2">
+				<input type="checkbox" name="hobby" id="1">
 				<label for="2">艺术</label>
-				<input type="checkbox" id="3">
+				<input type="checkbox" name="hobby" id="2">
 				<label for="3">科学</label>
-				<span><p>个人描述：</p></span>
-				<textarea name="" id="" cols="20" rows="10">
+				<input type="checkbox" name="hobby" id="3">
+				</div>
+				<div class="other">
+				<p>个人描述：</p>
+				<textarea name="textarea" id="" cols="20" rows="10">
 					这是一个多行输入框
 				</textarea>
+				</div>
 			</form>
 			</div>
 		</div>
