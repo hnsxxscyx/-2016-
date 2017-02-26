@@ -1,0 +1,49 @@
+body{
+	
+	width: 980px;
+	height: 1386px;
+	background: #FFFFFF;
+	margin: 0 auto;
+	margin-top: 0;
+}
+header,section,footer{
+	padding: 0 44px 0;
+}
+header>div:first-child{
+	background-color: #D55D5C;
+	height: 61px;
+	width: 110px;
+	vertical-align: bottom;
+}
+header>div{
+	display: inline-block;
+	vertical-align: bottom;
+}
+header>div>p{
+	display: inline;
+	vertical-align: bottom;
+	margin: 0 0 2px 2px;
+}
+#q{
+	background-color: #aaa;
+	width: 782px;
+
+}
+#q>p:first-child{
+	position: relative;
+	left: -110px;
+}
+#q>p:last-child{
+	float: right;
+}
+
+section>div>img:first-child{
+	width: 641px;
+	height: 301px;
+}
+section>div>img:before{
+	width: 191px;
+	height: 301px;
+	background-color: rgba(228,182,182,0.5);
+	z-index: 1;
+}

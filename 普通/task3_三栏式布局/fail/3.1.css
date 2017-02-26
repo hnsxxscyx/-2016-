@@ -1,0 +1,41 @@
+div{
+  padding:20px;
+  border:1px solid #999;
+}
+#main>div{
+  margin:0 10px;
+}
+#main{
+  width:95%;
+  height:100%;
+  margin:0 auto;
+  background-color:#EEE;
+  display:flex;
+  align-items:flex-start;
+}
+.left {
+  height:120px;
+  width:200px;
+  background-color:#fff;
+}
+.logo{
+  width:80px;
+  height:80px;
+  background-color:#eee; 
+}
+.main{
+  background-color:#fff;
+  flex:1;
+  padding:0 20px 0;
+}
+.right{
+  width:120px;
+  background-color:#fff;
+  display:block;
+}
+.right>.logo{
+  margin:0 0 20px 0;
+}
+.right>.logo:last-child{
+  margin:0;
+}

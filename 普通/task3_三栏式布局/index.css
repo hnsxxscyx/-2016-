@@ -1,0 +1,37 @@
+body{
+	background: #000;
+}
+
+#content,.logo,#left,#main,#right{
+  border:1px solid #999;
+/*  为什么实际不为1px  */
+  background-color:#eee;
+  padding:20px;
+}
+#left{
+  width:160px;
+  float: left;
+  background-color:#fff;
+}
+.logo{
+  width:80px;
+  height:80px;
+  padding: 0px;
+}
+.logo>p{
+  text-align:center;
+  line-height:45px;
+}
+#main{
+  background-color:#fff;
+  margin: 0 140px 0 220px;
+}
+#right{
+  width:80px;
+  background-color:#fff;
+  float: right;
+}
+#content{
+	overflow:hidden;
+	/*https://www.zhihu.com/question/30938856*/
+}

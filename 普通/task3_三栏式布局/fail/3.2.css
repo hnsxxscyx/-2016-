@@ -1,0 +1,58 @@
+html{
+	font-size: 16px;
+}
+body{
+	background: #000;
+}
+
+#main,.logo,.left,.main,.right{
+  border:1px solid #999;
+/*  为什么实际不为1px  */
+  background-color:#eee;
+  padding:20px;
+}
+#main{
+  width:90%;
+  min-height:620px;
+/* 无法实现高度自适应   */
+  margin:0 auto;
+  position:relative;
+}
+
+.left{
+  width:160px;
+  background-color:#fff;
+}
+.logo{
+  width:80px;
+  height:80px;
+  padding: 0px;
+}
+.logo>p{
+  text-align:center;
+  line-height:45px;
+}
+
+.main{
+  background-color:#fff;
+  margin-left:220px;
+  margin-right:140px;
+  position:relative;
+  top:-123px;
+/*   哪里计算出错了？为什么是3px? */
+}
+.right{
+  width:120px;
+  padding:0px;
+  background-color:#fff;
+  position:absolute;
+  right:20px;
+  top:20px;
+}
+.right>.logo{
+  margin:0 auto;
+  margin-top:20px;
+}
+.right>.logo:last-child{
+  margin-bottom:20px;
+}
