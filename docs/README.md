@@ -16,3 +16,15 @@
 ## 分析
 ![](http://p1.bpimg.com/4851/181ec96f414a08fa.png)
 -
+
+# task 6
+## 任务描述
+## 学到的经验
+- <img>元素下会有空白，原因以及去除办法参见https://www.zhihu.com/question/21558138
+- 许多元素都有自带margin
+- 重复的设置太多，用写好的类来赋予html不知道是不是好的解决方法
+- <hr>不设置background会出现空心
+## 暂存的问题
+- class与id命名十分不便
+- 段落间距不确定是不是line-height
+

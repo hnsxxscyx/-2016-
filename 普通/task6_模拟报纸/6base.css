@@ -1,5 +1,4 @@
 body{
-	
 	width: 980px;
 	height: 1386px;
 	background: #FFFFFF;
@@ -25,9 +24,7 @@ header>div>p{
 	margin: 0 0 2px 2px;
 }
 #q{
-	background-color: #aaa;
 	width: 782px;
-
 }
 #q>p:first-child{
 	position: relative;
@@ -37,22 +34,159 @@ header>div>p{
 	float: right;
 }
 
-section>div>img:first-child{
+section{
+	margin: 20px 0 0;
+}
+#first{
+	position: relative;
+}
+.green{
+	background: rgba(157,190,159,0.5);
+	width: 191px;
+	height: 300px;
+	position: absolute;
+}
+.red{
+	background: rgba(229,183,183,0.5);
+	width: 191px;
+	height: 300px;
+	position: absolute;
+	left: 448px;
+	/*感觉总是多出来一点所以缩小了几像素*/
+}
+#first>img:first-child{
 	width: 641px;
 	height: 301px;
 }
-section>div>img:before{
+/*#first>img:before{
+	content: "";
 	width: 191px;
 	height: 301px;
 	background-color: rgba(228,182,182,0.5);
-	z-index: 1;
+}*/
+#first>.about>hr{
+	margin: 0;
 }
-
- .inline_box{
-     	display: inline-block;
-     	float: right;
-     } 
+.inline_box{
+    display: inline-block;
+} 
 
 .about{
 	width: 203px;
+	float: right;
+}
+
+#way{
+	width: 641px;
+	position: relative;
+}
+
+#way>div:nth-child(1){
+	width: 230px;
+	float: left;
+}
+/*n不是从0开始*/
+#way>div:nth-child(2){
+	width: 200px;
+	margin: 0 30.5px;
+}
+#way>div:nth-child(3){
+	width: 150px;
+	float: right;
+}
+#way>div:nth-child(3)>ol{
+	text-indent: 5px;
+	list-style: none;
+	padding: 0;
+	position: absolute;
+	bottom: 0px;
+	/*为什么父元素的父元素设置relative会使其生效？*/
+}
+
+.location{
+	position: relative;
+}
+.last_left{
+	width: 415px;
+}
+.last_right{
+	width: 458px;
+	float: right;
+}
+.img_text{
+	position: relative;
+}
+.img_text>img{
+	width: 458px;
+	height: 275px;
+	display: block;
+}
+.img_text>div{
+	background: rgba(0,0,0,0.3);
+	width: 431px;
+	/*减掉下面的padding*/
+	height: 61px;
+	padding-left: 26px;
+	position: absolute;
+	bottom: 0px;
+	/*消除图片下空白https://www.zhihu.com/question/21558138*/
+}
+.img_text p{
+	line-height: 61px;
+	margin: 0;
+	margin-left: 10px;
+}
+.img_text hr{
+	display: inline-block;
+	height: 44px;
+	width: 3px;
+	margin: 0;
+	margin-top: 8.5px;
+	float: left;
+}
+
+#list{
+	width: 459px;
+	height: 318px;
+	background-color: #EEEED6;
+	position: absolute;
+	bottom: 0px;
+}
+#list>div:first-of-type{
+	display: inline-block;
+	width: 260px;
+	height: 160px;
+	background: #D55D5C;
+	position: absolute;
+	bottom: 0px;
+}
+#list>div:first-of-type hr{
+	width: 2px;
+	height: 86px;
+	display: inline-block;
+	margin: 0;
+}
+#list>div:first-of-type p{
+	display: inline-block;
+	margin: 0;
+}
+#list>div:first-of-type h3{
+	display: inline-block;
+	margin: 0;
+}
+/* 像这些如何批量写？ */
+#list>div:last-of-type{
+	display: inline-block;
+	width: 199px;
+	height: 160px;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+#list>div:last-of-type p{
+	padding: 10px;
+}
+
+footer>p{
+	float: right;
 }
