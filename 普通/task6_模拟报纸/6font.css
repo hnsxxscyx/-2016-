@@ -2,14 +2,14 @@
 类bootstrap，把共有特性结合起来，通过添加类来添加效果
 */
 header p{
-	font-family: "黑体";
+	font-family: 黑体;
 	margin: 0px;
 }
 header p:first-of-type{
 	font-size: 12px;
 	color: #fff;
 }
-header>p:last-of-type{
+header p:last-of-type{
 	font-size: 12px;
 	color: #d45d5c;
 	padding-right: 0;
@@ -30,7 +30,7 @@ header>hr{
 	color: #cc8091;
 }
 #first>.about>h2{
-	font-family: "微软雅黑";
+	font-family: 微软雅黑;
 	font-size: 24px;
 	color: #000;
 	text-decoration:underline;
@@ -38,7 +38,7 @@ header>hr{
 	margin: 0;
 }
 #first>.about>p{
-	font-family: "楷体";
+	font-family: 楷体;
 	font-size: 12px;
 	color: #676767;
 	line-height: 10px;
@@ -50,7 +50,7 @@ header>hr{
 	line-height: 116px;
 	color: #75b86b;
 	/*700这个好像没下划线啊*/
-	font-family: "微软雅黑";
+	font-family: 微软雅黑;
 	font-style: initial;
 	margin: 0;
 }
@@ -58,6 +58,170 @@ header>hr{
 	font-size: 55px;
 	line-height: 55px;
 	margin: 0;
+	margin-left: 20px;
+	/*看着与图不一样往右移了移*/
 	color: #cc8091;
-	font-family: "微软雅黑";
+	font-family: 微软雅黑;
+}
+.right_css_text>p:nth-child(1){
+	font-size: 21px;
+	/*15px倒比较像标注图*/
+	color: #cc8091;
+	font-family: 微软雅黑;
+	line-height: 21px;
+}
+.right_css_text>p:nth-child(2){
+	font-size: 12px;
+	color: #cc8091;
+	/*标注图颜色应该标错了*/
+	font-family: 微软雅黑;
+	line-height: 12px;
+}
+
+.way>h3{
+	font-size: 16px;
+	font-weight:bold; 
+	text-decoration: underline;
+}
+.way:nth-of-type(1)>h3{
+	color: #418c59;
+}
+.way:nth-of-type(2)>h3{
+	color: #d2994f;
+}
+.way:nth-of-type(3)>h3{
+	color: #cc7680;
+}
+.way>p{
+	font-size: 12px;
+	line-height: 16px;
+}
+.way:nth-of-type(1)>p{
+	color: #767777;
+	font-family: 宋体;
+}
+.way:nth-of-type(2)>p,.way:nth-of-type(3)>p{
+	color: #231815;
+	font-family: 宋体;
+	opacity: 0.7;
+}
+.way>ol>li{
+	font-size: 12px;
+	font-family: 微软雅黑;
+	line-height: 16px;
+}
+.way>ol>li>span{
+	color: #cd4a48;
+	font-style: italic;
+	opacity: 0.7;
+}
+
+.last_left>h1{
+	font-family: 黑体;
+	color: #11456b;
+	font-size: 42px;
+	line-height: 42px;
+}
+.last_left>h1>span{
+	color: #f5e327;
+	font-style: italic;
+	font-size: 72px;
+}
+.last_left>h1:nth-of-type(2){
+	font-weight: bold;
+	font-size: 33px;
+	line-height: 33px;
+	/*看来段落间距并非line-height，是要自己设置的实实在在的间距*/
+}
+.last_left>hr{
+	width: 100%;
+	height: 2px;
+	color: #11456b;
+	background: #11456b;
+}
+.last_left>p{
+	font-size: 12px;
+	color: #767777;
+	line-height: 16px;
+}
+.last_left>p>span{
+	
+}
+.last_left>p:nth-of-type(2){
+	text-indent: 24px;
+}
+.last_left>p:nth-of-type(1):first-letter{
+	font-size: 70px;
+	color: #f5e327;
+	font-family: 微软雅黑;
+	float: left;
+	padding: 25px 10px 25px 0px;
+	/*为什么需要padding实现？*/
+}
+.img_text hr{
+	height: 44px;
+	width: 3px;
+	color: #72b16a;
+	background: #72b16a;
+	border: 0;
+}
+.img_text>div>p{
+	font-size: 12px;
+	color: #72b16a;
+	font-family: 微软雅黑;
+	font-style: italic;
+	letter-spacing: 140%;
+}
+.img_text>div>p>span{
+	font-size: 26px;
+	font-style: normal;
+	letter-spacing: 100%;
+	color: #fff;
+}
+
+#list>ul{
+	list-style: none;
+	line-height: 40px;
+}
+.triangle{
+	width:0; 
+	height:0; 
+	border:5px solid; 
+	border-color:#EEEED6 #EEEED6 #000 #EEEED6;
+	margin-right: 10px;
+}
+#list>div:first-of-type>p{
+	font-size: 110px;
+	color: #fff;
+	margin: 0;
+	margin-left: 10px; 
+	font-family: 微软雅黑;
+	line-height: 160px;
+}
+#list>div:first-of-type>div>h3{
+	display: block;
+	font-size: 21px;
+	color: #fff;
+	font-family: 黑体;
+	font-style: italic;
+	line-height: 30px;
+}
+#list>div:first-of-type>div>p{
+	font-size: 12px;
+	color: #fff;
+	font-family: 黑体;
+	line-height: 15px;
+	padding-left: 4px;
+	/*感觉没对齐补一补*/
+}
+#list>div:last-of-type>p{
+	font-size: 14px;
+	color: #5a5b5b;
+	font-family: 黑体;
+	line-height: 22px;
+}
+#list>div:last-of-type>p>span{
+	font-size:72px;
+	color: #d45d5c;
+	font-family: "黑体";
 }

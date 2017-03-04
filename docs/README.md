@@ -24,7 +24,15 @@
 - 许多元素都有自带margin
 - 重复的设置太多，用写好的类来赋予html不知道是不是好的解决方法
 - <hr>不设置background会出现空心
+- 首字下沉的实现
+    + 使用两种标签进行左浮动
+    + 使用first-letter左浮动
+- 使用CSS实现三角
+    + [CSS border三角、圆角图形生成技术简介](http://www.zhangxinxu.com/wordpress/2010/05/css-border%E4%B8%89%E8%A7%92%E3%80%81%E5%9C%86%E8%A7%92%E5%9B%BE%E5%BD%A2%E7%94%9F%E6%88%90%E6%8A%80%E6%9C%AF%E7%AE%80%E4%BB%8B/)
+    + 《CSS揭秘》
+- 
 ## 暂存的问题
 - class与id命名十分不便
 - 段落间距不确定是不是line-height
+- 使用first-letter实现首字下沉为什么要配合padding实现效果？
 

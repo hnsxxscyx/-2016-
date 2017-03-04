@@ -70,10 +70,17 @@ section{
 .inline_box{
     display: inline-block;
 } 
-
+.right_css_text>p{
+	margin: 0;
+}
 .about{
 	width: 203px;
+	height: 301px;
 	float: right;
+}
+.about>div:last-child{
+	position: absolute;
+	bottom: 0px;
 }
 
 #way{
@@ -109,6 +116,16 @@ section{
 .last_left{
 	width: 415px;
 }
+.last_left>h1{
+	margin: 8px 0 8px;
+}
+.last_left img{
+	float: right;
+	margin: 10px;
+}
+.last_left p{
+	margin: 0;
+}
 .last_right{
 	width: 458px;
 	float: right;
@@ -138,8 +155,6 @@ section{
 }
 .img_text hr{
 	display: inline-block;
-	height: 44px;
-	width: 3px;
 	margin: 0;
 	margin-top: 8.5px;
 	float: left;
@@ -159,6 +174,11 @@ section{
 	background: #D55D5C;
 	position: absolute;
 	bottom: 0px;
+}
+#list>div:first-of-type>div{
+	width: 170px;
+	/*不造怎么上去，只好用这种笨方法*/
+	height: 86px;
 }
 #list>div:first-of-type hr{
 	width: 2px;
