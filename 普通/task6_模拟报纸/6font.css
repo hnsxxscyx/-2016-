@@ -183,6 +183,11 @@ header>hr{
 	list-style: none;
 	line-height: 40px;
 }
+#list hr{
+	color:#fff;
+	background: #fff; 
+	border: none;
+}
 .triangle{
 	width:0; 
 	height:0; 
@@ -217,11 +222,35 @@ header>hr{
 #list>div:last-of-type>p{
 	font-size: 14px;
 	color: #5a5b5b;
+	font-style: italic;
 	font-family: 黑体;
 	line-height: 22px;
+	margin: 0 15px 0;
+	padding: 0;
+
 }
 #list>div:last-of-type>p>span{
+	font-style: normal;
 	font-size:72px;
 	color: #d45d5c;
 	font-family: "黑体";
+	position: relative;
+	right: 36px;
+	top: 36px;
+	margin: 0 -36px 0 0 ;
+	vertical-align: center;
+}
+#list>div:last-of-type>p>span:last-of-type{
+	right: 0px;
+	top: 26px;
+	float: right;
+}
+footer>p{
+	font-size: 12px;
+	color: #d45d5c;
+	font-family: 黑体;
+}
+footer>hr{
+	color: #938e8c;
+	background: #938e8c;
 }
