@@ -1,15 +1,16 @@
-@media screen and (max-width: 1280px) {
-  body {
-    width: 1280px;
-    overflow: scroll; } }
-@media screen and (min-width: 1280px) {
-  body {
-    width: 100%; } }
+body {
+  width: 100%;
+  min-width: 1280px; }
+
 .lead .lead-content > div {
   font-size: 16px; }
 
-.col-fixed {
+.col-90 {
   width: 90%;
+  margin: 0 auto; }
+
+.col-80 {
+  width: 80%;
   margin: 0 auto; }
 
 .font-red {
@@ -42,7 +43,7 @@ nav {
   nav p {
     font-size: 24px;
     font-weight: bold;
-    line-height: 60px;
+    line-height: 50px;
     display: inline-block;
     margin: 0; }
     nav p img {
@@ -146,14 +147,14 @@ nav > a:link, a:visited, a:hover, a:active {
     text-align-last: center; }
 
 .activity {
-  text-align: center; }
+  text-align-last: justify; }
 
 .activity-show {
   letter-spacing: -1px;
   display: inline-block;
   width: 250px;
-  text-align: center;
-  margin: 100px 20px 110px; }
+  text-align-last: center;
+  margin: 100px 0px 110px; }
   .activity-show img {
     width: 90%;
     border: 1px solid #e8e8e8;
@@ -210,11 +211,90 @@ nav > a:link, a:visited, a:hover, a:active {
     height: 2px; }
   .join .join-rule {
     width: 290px;
-    float: left; }
+    float: left;
+    text-align: left; }
+    .join .join-rule h4 {
+      margin: 0 0 10px; }
+    .join .join-rule p {
+      margin: 0; }
+    .join .join-rule .join-right {
+      text-align: right; }
   .join form {
     overflow: hidden;
-    margin-left: 360px;
-    width: 640px; }
+    margin-left: 360px; }
     .join form input {
       border: none;
-      background: #ededed; }
+      background: #ededed;
+      width: 15vw;
+      min-width: 200px;
+      height: 35px; }
+    .join form .input {
+      width: 24.2vw;
+      min-width: 310px;
+      height: 40px;
+      display: inline-block;
+      margin: 0 18px 13px 0px;
+      line-height: 40px;
+      text-align: left; }
+    .join form .textarea {
+      width: 50vw;
+      min-width: 640px;
+      height: 120px;
+      display: inline-block;
+      margin: 0 18px 13px 0px;
+      position: relative; }
+      .join form .textarea label {
+        position: absolute;
+        top: 5px; }
+    .join form textarea {
+      width: 50vw;
+      min-width: 640px;
+      height: 120px;
+      border: none;
+      padding: 0; }
+    .join form button {
+      width: 50vw;
+      min-width: 640px;
+      height: 40px;
+      border: none;
+      margin-right: 18px; }
+    .join form label {
+      margin-left: 15px; }
+
+.contact {
+  background: #32363e;
+  height: 360px;
+  text-align: center; }
+  .contact form {
+    width: 40vw;
+    min-width: 510px;
+    display: inline-block; }
+    .contact form input {
+      width: 33.5vw;
+      min-width: 425px;
+      border: 2px solid #989a9e;
+      height: 36px;
+      padding: 0;
+      float: left; }
+    .contact form button {
+      width: 6vw;
+      min-width: 75px;
+      background: #6f7178;
+      border: 2px solid #51545c;
+      height: 40px;
+      padding: 0;
+      float: left; }
+
+footer {
+  background: #2f3038;
+  height: 57px; }
+  footer p {
+    margin: 0;
+    display: inline-block; }
+  footer a {
+    float: right; }
+  footer a:link, footer a:visited, footer a:hover, footer a:active {
+    color: #fff;
+    text-decoration: none; }
+  footer a, footer p {
+    margin-top: 25px; }

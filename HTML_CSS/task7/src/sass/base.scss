@@ -1,14 +1,10 @@
-@media screen and (max-width: 1280px){
-  body{
-    width:1280px;
-    overflow:scroll;
-  }
-}
-@media screen and (min-width: 1280px){
+
   body{
     width:100%;
+    min-width:1280px;
+    //根本不用媒体查询诶
   }
-}
+
 @import 'font';
 
 $font1:12px;
@@ -18,8 +14,12 @@ $font4:30px;
 $font5:50px;
 // 但是用rem不是也很好用吗
 $red:#e74f4d;
-.col-fixed{
+.col-90{
 	width: 90%;
+	margin: 0 auto;
+}
+.col-80{
+	width: 80%;
 	margin: 0 auto;
 }
 .font-red{
@@ -54,7 +54,7 @@ nav{
 	p{
 		font-size: $font3;
 		font-weight: bold;
-		line-height: 60px;
+		line-height: 50px;
 		// 原图似乎并不与右侧对齐
 		display: inline-block;
 		margin: 0;
@@ -184,20 +184,20 @@ nav>a:link,a:visited,a:hover,a:active{
 	}
 }
 .activity{
-	text-align: center;
+	text-align-last: justify;
 }
 .activity-show{
 	letter-spacing: -1px;
 	display: inline-block;
 	width: 250px;
-	text-align: center;
+	text-align-last: center;
 	img{
 		width: 90%;
 		border: 1px solid #e8e8e8;
 		padding: 10px 8px 13px 7px;
 		background: #fff;
 	}
-	margin: 100px 20px 110px;
+	margin: 100px 0px 110px;
 }
 .new{
 	.new-world-img{
@@ -261,14 +261,113 @@ nav>a:link,a:visited,a:hover,a:active{
 	.join-rule{
 		width: 290px;
 		float: left;
+		text-align: left;
+		h4{
+			margin: 0 0 10px;
+		}
+		p{
+			margin: 0;
+		}
+		.join-right{
+			text-align: right;
+		}
+		a{
+			
+		}
 	}
 	form{
 		overflow: hidden;
 		margin-left: 360px;
-		width: 640px;
 		input{
 			border: none;
 			background: rgb(237,237,237);
+			width: 15vw;
+			min-width: 200px;
+			height: 35px;
 		}
+		.input{
+			width: 24.2vw;
+			min-width: 310px;
+			height: 40px;
+			display: inline-block;
+			margin: 0 18px 13px 0px;
+			line-height: 40px;
+			text-align: left;
+		}
+		.textarea{
+			width: 50vw;
+			min-width: 640px;
+			height: 120px;
+			display: inline-block;
+			margin: 0 18px 13px 0px;
+			position: relative;
+			label{
+				position: absolute;
+				top:5px;
+			}
+		}
+		textarea{
+			width: 50vw;
+			min-width: 640px;
+			height: 120px;
+			border: none;
+			padding: 0;
+		}
+		button{
+			width: 50vw;
+			min-width: 640px;
+			height: 40px;
+			border: none;
+			margin-right: 18px;
+		}
+		label{
+			margin-left: 15px;
+		}
+	}
+}
+.contact{
+	background: rgb(50,54,62);
+	height: 360px;
+	text-align: center;
+	form{
+		width: 40vw;
+		min-width: 510px;
+		display: inline-block;
+		input{
+			width: 33.5vw;
+			min-width: 425px;
+			border: 2px solid #989a9e;
+			height: 36px;
+			padding: 0;
+			float: left;
+		}
+		button{
+			width: 6vw;
+			min-width: 75px;
+			background: #6f7178;
+			border: 2px solid #51545c;
+			// input高度不和border重合button重合？
+			height: 40px;
+			padding: 0;
+			float: left;
+		}
+	}
+}
+footer{
+	background: rgb(47,48,56);
+	height: 57px;
+	p{
+		margin: 0;
+		display: inline-block;
+	}
+	a{
+		float: right;
+	}
+	a:link,a:visited,a:hover,a:active{
+				color: #fff;
+				text-decoration: none;
+			}
+	a,p{
+		margin-top: 25px;
 	}
 }
