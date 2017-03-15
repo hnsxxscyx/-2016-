@@ -1,505 +1,60 @@
-@charset "UTF-8";
-body {
-  width: 100%;
-  min-width: 1280px; }
+/*
+Error: File to import not found or unreadable: font.
+        on line 8 of src/sass/base.scss
 
-.bold-face {
-  font-family: SimHei,"黑体"; }
+3:     width:100%;
+4:     min-width:1280px;
+5:     //根本不用媒体查询诶
+6:   }
+7: 
+8: @import 'font';
+9: 
+10: $h:"黑体",SimHei;
+11: $w:"微软雅黑","Microsoft YaHei";
+12: $s:"宋体",SimSun;
+13: // 但是用rem不是也很好用吗
 
-.microsoft-yahei {
-  font-family: "Microsoft YaHei","微软雅黑"; }
-
-.font-size-14 {
-  font-size: 14px; }
-
-.font-size-21 {
-  font-size: 21px; }
-
-.font-size-30 {
-  font-size: 30px; }
-
-.font-size-60 {
-  font-size: 60px; }
-
-.oblique {
-  font-style: oblique; }
-
-.col-90 {
-  width: 90%;
-  margin: 0 auto; }
-
-.col-80 {
-  width: 80%;
-  margin: 0 auto; }
-
-.font-red {
-  color: #e74f4d; }
-
-.font-grey {
-  color: #cccbcb; }
-
-.font-white {
-  color: #fff; }
-
-.background-red {
-  background-color: #e74f4d; }
-
-.background-white {
-  background: #fff; }
-
-.background-grey-shallow {
-  background-color: #f8f8f8; }
-
-.background-grey {
-  background: #ededed; }
-
-.border-red {
-  border: 1px solid #e74f4d; }
-
-.right_triangle {
-  width: 0;
-  height: 0;
-  border-width: 30px;
-  border-right: 42px;
-  border-style: solid;
-  border-color: transparent #fff transparent transparent;
-  position: absolute;
-  top: 265px;
-  right: 0; }
-
-.left_triangle {
-  width: 0;
-  height: 0;
-  border-width: 14px 0 14px 24px;
-  border-style: solid;
-  border-color: transparent transparent transparent #fff;
-  position: absolute;
-  top: 245px;
-  left: 0px;
-  z-index: 2; }
-
-body {
-  margin: 0; }
-
-nav {
-  width: 100%;
-  height: 50px; }
-  nav p {
-    font-size: 21px;
-    font-family: "黑体", SimHei;
-    line-height: 50px;
-    display: inline-block;
-    margin: 0; }
-    nav p img {
-      vertical-align: middle;
-      margin-top: -4px;
-      margin-right: 5px; }
-  nav ul {
-    float: right;
-    display: inline-block;
-    list-style: none;
-    margin: 0; }
-    nav ul li {
-      line-height: 50px;
-      display: inline-block;
-      margin-right: 30px;
-      font-size: 14px;
-      font-family: "微软雅黑", "Microsoft YaHei"; }
-      nav ul li a {
-        font-size: 14px;
-        font-family: "微软雅黑", "Microsoft YaHei"; }
-      nav ul li a:link, nav ul li a:visited {
-        color: #000;
-        text-decoration: none; }
-      nav ul li a:hover, nav ul li a:active {
-        color: #e74f4d;
-        text-decoration: none; }
-  nav .log-in {
-    float: right;
-    line-height: 50px; }
-  nav .log-in:link, nav .log-in:visited, nav .log-in:hover, nav .log-in:active {
-    color: #e74f4d; }
-
-.lead {
-  position: relative; }
-  .lead .lead-show {
-    background: url("../../src/images/first_background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 853px;
-    font-family: "微软雅黑", "Microsoft YaHei"; }
-    .lead .lead-show .lead-show-mask {
-      background-color: rgba(100, 100, 100, 0.1);
-      height: auto;
-      width: 100%;
-      position: absolute; }
-    .lead .lead-show .show-content {
-      position: relative;
-      top: 230px;
-      z-index: 2;
-      margin-left: 10%; }
-      .lead .lead-show .show-content h1 {
-        margin: 0px 0 30px;
-        font-size: 60px; }
-      .lead .lead-show .show-content button {
-        margin-top: 70px;
-        width: 330px;
-        height: 60px;
-        border: none;
-        font-size: 30px; }
-      .lead .lead-show .show-content p {
-        font-size: 21px; }
-  .lead .lead-content {
-    font-size: 0; }
-    .lead .lead-content p {
-      font-size: 14px;
-      font-family: "黑体", SimHei; }
-  .lead .lead-content > div {
-    width: 25%;
-    height: 250px;
-    display: inline-block;
-    text-align: center; }
-    .lead .lead-content > div > p {
-      margin: 5px; }
-    .lead .lead-content > div > img {
-      margin: 45px 0; }
-    .lead .lead-content > div > hr {
-      display: inline-block;
-      float: right;
-      margin-top: 130px;
-      width: 2px;
-      height: 50px;
-      border: none;
-      color: #bbbbbb;
-      background-color: #bbbbbb; }
-
-.information-lead {
-  height: 350px;
-  text-align: center;
-  overflow: hidden; }
-  .information-lead img {
-    margin: 90px auto 50px; }
-  .information-lead h1 {
-    font-size: 53.59px;
-    font-family: "黑体", SimHei; }
-
-.information-map {
-  background: url(../../src/images/map.png) no-repeat;
-  background-size: cover;
-  text-align: center;
-  font-family: "微软雅黑", "Microsoft YaHei";
-  height: 317px;
-  overflow: hidden; }
-  .information-map h3 {
-    margin: 0;
-    margin-top: 50px;
-    font-size: 21px; }
-  .information-map > p {
-    margin: 0 auto 50px; }
-  .information-map hr {
-    width: 30px;
-    height: 2px;
-    border: none;
-    margin: 10px auto 20px; }
-  .information-map form {
-    width: 80%;
-    margin: 0 auto;
-    text-align-last: justify; }
-    .information-map form select, .information-map form button {
-      display: inline-block;
-      width: 235px;
-      height: 35px;
-      border: 1px solid #e74f4d;
-      font-size: 12px; }
-    .information-map form select {
-      padding: 0 15px 0 10px;
-      appearance: none;
-      -moz-appearance: none;
-      -webkit-appearance: none;
-      background: url(../../src/images/select.png) no-repeat scroll 95% center, #fff; }
-      .information-map form select option:hover {
-        background-color: #e74f4d; }
-    .information-map form select:focus option:checked {
-      color: white;
-      background: #e74f4d; }
-    .information-map form button {
-      text-align-last: center;
-      font-size: 14px; }
-
-.activity {
-  text-align-last: justify; }
-
-.activity-show {
-  letter-spacing: -1px;
-  display: inline-block;
-  width: 250px;
-  text-align-last: center;
-  font-family: "微软雅黑", "Microsoft YaHei";
-  margin: 100px 0px 100px; }
-  .activity-show img {
-    width: 90%;
-    border: 1px solid #e8e8e8;
-    padding: 10px 8px 13px 7px;
-    background: #fff; }
-  .activity-show h3 {
-    margin: 0;
-    margin-left: 8px;
-    font-size: 22px;
-    text-align-last: justify;
-    width: 235px; }
-  .activity-show h4 {
-    margin: 0;
-    font-size: 18px; }
-  .activity-show p {
-    margin: 0;
-    font-size: 14px;
-    color: #cccbcb; }
-
-.new .new-world-img {
-  width: 66.7%;
-  min-width: 853.3px;
-  height: 565px;
-  text-align: center;
-  background: url(../../src/images/second_background.png) no-repeat top left;
-  background-size: cover;
-  float: left;
-  font-family: "微软雅黑", "Microsoft YaHei";
-  position: relative; }
-  .new .new-world-img h1 {
-    font-size: 157.79px;
-    line-height: 158px;
-    margin: 0 auto 35px; }
-  .new .new-world-img h2 {
-    font-size: 49.47px;
-    margin: 130px auto 10px; }
-  .new .new-world-img h3 {
-    font-size: 21.91px;
-    margin: 0 auto 25px; }
-.new .new-world-box {
-  width: 33.3%;
-  min-width: 426.7px;
-  height: 565px;
-  margin-left: 66.7%;
-  text-align: center; }
-  .new .new-world-box .box-content {
-    display: inline-block;
-    width: 285px; }
-    .new .new-world-box .box-content h3 {
-      font-family: "黑体", SimHei;
-      font-size: 21px;
-      margin: 160px auto 30px; }
-    .new .new-world-box .box-content p {
-      font-family: "微软雅黑", "Microsoft YaHei";
-      font-size: 12px;
-      line-height: 32px;
-      margin: 0 auto 50px;
-      text-align: left; }
-    .new .new-world-box .box-content .border-red {
-      margin: 0 auto 20px;
-      width: 105px;
-      height: 30px; }
-      .new .new-world-box .box-content .border-red a:link, .new .new-world-box .box-content .border-red a:visited, .new .new-world-box .box-content .border-red a:hover, .new .new-world-box .box-content .border-red a:active {
-        color: #e74f4d;
-        text-decoration: none; }
-      .new .new-world-box .box-content .border-red a {
-        line-height: 30px; }
-    .new .new-world-box .box-content ul {
-      list-style: none;
-      width: 60px;
-      margin: 0 auto;
-      padding: 0;
-      text-align-last: justify; }
-      .new .new-world-box .box-content ul li {
-        display: inline-block;
-        width: 8px;
-        height: 8px;
-        border: 1px solid #929293;
-        border-radius: 4px; }
-      .new .new-world-box .box-content ul li:hover {
-        background: #929293; }
-.new .new-box-img {
-  width: 33.3%;
-  min-width: 426.7px;
-  height: 520px;
-  background: url(../../src/images/third_background.png) no-repeat;
-  background-size: cover;
-  margin-left: 66.7%;
-  position: relative; }
-.new .new-box-img:after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.3); }
-.new .new-box-content {
-  width: 33.35vw;
-  min-width: 426.65px;
-  height: 520px;
-  text-align: center;
-  float: left;
-  font-family: "黑体", SimHei; }
-  .new .new-box-content hr {
-    width: 30px;
-    height: 2px;
-    border: none;
-    margin: 25px auto 25px; }
-  .new .new-box-content h3 {
-    font-size: 21px; }
-  .new .new-box-content h3:first-of-type {
-    margin: 170px auto 10px; }
-  .new .new-box-content div {
-    width: 170px;
-    height: 40px;
-    margin: 0 auto; }
-    .new .new-box-content div a:link, .new .new-box-content div a:visited, .new .new-box-content div a:hover, .new .new-box-content div a:active {
-      color: #e74f4d;
-      text-decoration: none; }
-    .new .new-box-content div a {
-      line-height: 40px; }
-  .new .new-box-content .border-white {
-    border: 1px solid #fff; }
-    .new .new-box-content .border-white a:link, .new .new-box-content .border-white a:visited, .new .new-box-content .border-white a:hover, .new .new-box-content .border-white a:active {
-      color: #fff;
-      text-decoration: none; }
-.new .new-box {
-  width: 100%; }
-
-.join {
-  height: 750px;
-  text-align: center; }
-  .join h3 {
-    font-family: "黑体", SimHei;
-    font-size: 21px;
-    margin: 120px 0 0; }
-  .join p {
-    font-family: "微软雅黑", "Microsoft YaHei";
-    font-size: 12px; }
-  .join > hr {
-    width: 30px;
-    height: 2px;
-    border: none;
-    margin: 10px auto 15px; }
-  .join > p:last-of-type {
-    margin-bottom: 105px; }
-  .join .join-rule {
-    width: 290px;
-    float: left;
-    text-align: left; }
-    .join .join-rule h4 {
-      margin: 0 0 25px; }
-    .join .join-rule p {
-      margin: 0 0 10px;
-      color: #9d9b9a; }
-    .join .join-rule .join-right {
-      text-align: right; }
-      .join .join-rule .join-right a:link, .join .join-rule .join-right a:visited, .join .join-rule .join-right a:hover, .join .join-rule .join-right a:active {
-        color: #9d9b9a;
-        text-decoration: none; }
-  .join form {
-    overflow: hidden;
-    margin-left: 360px; }
-    .join form input {
-      border: none;
-      background: #ededed;
-      width: 15vw;
-      min-width: 200px;
-      height: 35px; }
-    .join form .input-box {
-      width: 50vw;
-      min-width: 640px;
-      text-align-last: justify;
-      display: inline-block; }
-    .join form .input {
-      width: 24.2vw;
-      min-width: 310px;
-      height: 40px;
-      display: inline-block;
-      margin: 0 0 13px 0px;
-      line-height: 40px;
-      text-align-last: left; }
-    .join form .textarea {
-      width: 50vw;
-      min-width: 640px;
-      height: 120px;
-      display: inline-block;
-      margin: 0 0 13px 0px;
-      position: relative; }
-      .join form .textarea label {
-        position: absolute;
-        top: 5px; }
-    .join form textarea {
-      width: 50vw;
-      min-width: 640px;
-      height: 120px;
-      border: none;
-      padding: 0; }
-    .join form button {
-      width: 50vw;
-      min-width: 640px;
-      height: 40px;
-      border: none;
-      font-family: "黑体", SimHei;
-      font-size: 14px; }
-    .join form label {
-      margin-left: 15px;
-      font-family: "宋体", SimSun;
-      font-size: 12px; }
-
-.contact {
-  background: #32363e;
-  height: 360px;
-  text-align: center;
-  overflow: hidden; }
-  .contact h3 {
-    font-family: "黑体", SimHei;
-    font-size: 21px;
-    margin: 90px auto 10px; }
-  .contact p {
-    margin: 0 0 5px; }
-  .contact > p:last-of-type {
-    margin: 0 0 30px; }
-  .contact form {
-    width: 40vw;
-    min-width: 510px;
-    display: inline-block;
-    margin-bottom: 35px; }
-    .contact form input {
-      width: 33.5vw;
-      min-width: 425px;
-      border: none;
-      height: 40px;
-      padding: 0;
-      float: left; }
-    .contact form button {
-      width: 6vw;
-      min-width: 75px;
-      background: #6f7178;
-      border: 2px solid #51545c;
-      height: 40px;
-      padding: 0;
-      float: left;
-      font-family: "微软雅黑", "Microsoft YaHei";
-      font-size: 15px; }
-  .contact .awesome {
-    margin: 0 auto;
-    width: 200px;
-    text-align-last: justify; }
-    .contact .awesome a:link, .contact .awesome a:visited, .contact .awesome a:hover, .contact .awesome a:active {
-      color: #fff;
-      text-decoration: none; }
-
-footer {
-  background: #2f3038;
-  height: 57px; }
-  footer p {
-    margin: 0;
-    display: inline-block; }
-  footer a {
-    float: right; }
-  footer a:link, footer a:visited, footer a:hover, footer a:active {
-    color: #fff;
-    text-decoration: none; }
-  footer a, footer p {
-    margin-top: 25px; }
+Backtrace:
+src/sass/base.scss:8
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/import_node.rb:67:in `rescue in import'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/import_node.rb:45:in `import'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/import_node.rb:28:in `imported_file'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/import_node.rb:37:in `css_import?'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:313:in `visit_import'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:159:in `visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/root_node.rb:20:in `render'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:282:in `render'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin.rb:82:in `update_stylesheets'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:51:in `process_result'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/base.rb:52:in `parse'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/base.rb:19:in `parse!'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.23/bin/sass:13:in `<top (required)>'
+C:/Ruby23-x64/bin/sass:22:in `load'
+C:/Ruby23-x64/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: font.\A         on line 8 of src/sass/base.scss\A \A 3:     width:100%;\A 4:     min-width:1280px;\A 5:     //根本不用媒体查询诶\A 6:   }\A 7: \A 8: @import 'font';\A 9: \A 10: $h:\"黑体\",SimHei;\A 11: $w:\"微软雅黑\",\"Microsoft YaHei\";\A 12: $s:\"宋体\",SimSun;\A 13: // 但是用rem不是也很好用吗"; }
