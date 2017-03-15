@@ -7,13 +7,14 @@
 
 @import 'font';
 
-$font1:12px;
-$font2:18px;
-$font3:24px;
-$font4:30px;
-$font5:50px;
+$h:"黑体",SimHei;
+$w:"微软雅黑","Microsoft YaHei";
+$s:"宋体",SimSun;
 // 但是用rem不是也很好用吗
 $red:#e74f4d;
+.oblique{
+	font-style: oblique;
+}
 .col-90{
 	width: 90%;
 	margin: 0 auto;
@@ -43,8 +44,31 @@ $red:#e74f4d;
 .background-grey{
 	background: rgb(237,237,237);
 }
-
-
+.border-red{
+	border: 1px solid #e74f4d;
+}
+.right_triangle{
+	width: 0;
+	height: 0;
+	border-width:30px;
+	border-right: 42px;
+	border-style: solid;
+	border-color: transparent #fff transparent transparent;
+	position: absolute;
+	top:265px;
+	right: 0;
+}
+.left_triangle{
+	width: 0;
+	height: 0;
+	border-width:14px 0 14px 24px;
+	border-style: solid;
+	border-color: transparent transparent transparent #fff;
+	position: absolute;
+	top:245px;
+	left: 0px;
+	z-index: 2;
+}
 body{
 	margin: 0;
 }
@@ -52,8 +76,8 @@ nav{
 	width: 100%;
 	height: 50px;
 	p{
-		font-size: $font3;
-		font-weight: bold;
+		font-size: 21px;
+		font-family: $h;
 		line-height: 50px;
 		// 原图似乎并不与右侧对齐
 		display: inline-block;
@@ -74,8 +98,12 @@ nav{
 			line-height: 50px;
 			display: inline-block;
 			margin-right: 30px;
-			font-size: $font2;
-			font-weight: bold;
+			font-size: 14px;
+			font-family: $w;
+			a{
+				font-size: 14px;
+				font-family: $w;
+			}
 			a:link,a:visited{
 				color: #000;
 				text-decoration: none;
@@ -86,14 +114,15 @@ nav{
 			}
 		}
 	}
+	.log-in{
+		float: right;
+		line-height: 50px;
+	}
+	.log-in:link,.log-in:visited,.log-in:hover,.log-in:active{
+		color: $red;
+	}
 }
-nav>a{
-	float: right;
-	line-height: 50px;
-}
-nav>a:link,a:visited,a:hover,a:active{
-	color: $red;
-}
+
 
 .lead{
 	position: relative;
@@ -102,6 +131,7 @@ nav>a:link,a:visited,a:hover,a:active{
 		background-repeat: no-repeat;
 		background-size: cover;
 		height: 853px;
+		font-family: $w;		
 		.lead-show-mask{
 			background-color: rgba(100,100,100,0.1);
 			height: auto;
@@ -115,18 +145,27 @@ nav>a:link,a:visited,a:hover,a:active{
 			margin-left: 10%;
 			h1{
 				margin: 0px 0 30px;
+				font-size: 60px;
 			}
 			button{
 				margin-top: 70px;
 				width: 330px;
 				height: 60px;
 				border: none;
+				font-size: 30px;
+			}
+			p{
+			font-size: 21px;
 			}
 		}
 	}
 	.lead-content{
 		font-size: 0;
 		// 用来消除inline-block副作用
+		p{
+			font-size: 14px;
+			font-family: $h;
+		}
 	}
 	.lead-content>div{
 		width: 25%;
@@ -155,33 +194,69 @@ nav>a:link,a:visited,a:hover,a:active{
 .information-lead{
 	height: 350px;
 	text-align: center;
+	overflow: hidden;
+	img{
+		margin: 90px auto 50px;
+	}
+	h1{
+		font-size: 53.59px;
+		font-family: $h;
+	}
 }
 .information-map{
 	background: url(../../src/images/map.png) no-repeat;
 	background-size: cover;
 	text-align: center;
+	font-family: $w;
 	height: 317px;
+	overflow: hidden;
 	h3{
 		margin: 0;
+		margin-top: 50px;
+		font-size: 21px;
+	}
+	>p{
+		margin: 0 auto 50px;
 	}
 	hr{
 		width: 30px;
-		height: 2;
+		height: 2px;
+		border: none;
+		margin: 10px auto 20px;
 	}
 	form{
 		width: 80%;
 		margin: 0 auto;
 		text-align-last:justify;
+		select,button{
+			display: inline-block;
+			width: 235px;
+			height: 35px;
+			border: 1px solid $red;
+			font-size: 12px;
+		}
+		select{
+			padding:0 15px 0 10px;
+			appearance:none;
+  			-moz-appearance:none;
+  			-webkit-appearance:none;
+  			background: 
+  			url(../../src/images/select.png) no-repeat scroll 95% center,
+  			#fff;
+  			option:hover{
+				background-color: $red;
+  			}
+		}
+		select:focus option:checked{
+			 color: white; 
+			 background:$red;
+			}
+		button{
+			text-align-last: center;
+			font-size: 14px;
+		}
 	}
-	select,button{
-		display: inline-block;
-		width: 235px;
-		height: 35px;
-		border: 1px solid $red;
-	}
-	button{
-		text-align-last: center;
-	}
+	
 }
 .activity{
 	text-align-last: justify;
@@ -191,13 +266,30 @@ nav>a:link,a:visited,a:hover,a:active{
 	display: inline-block;
 	width: 250px;
 	text-align-last: center;
+	font-family: $w;
 	img{
 		width: 90%;
 		border: 1px solid #e8e8e8;
 		padding: 10px 8px 13px 7px;
 		background: #fff;
 	}
-	margin: 100px 0px 110px;
+	margin: 100px 0px 100px;
+	h3{
+		margin: 0;
+		margin-left: 8px;
+		font-size: 22px;
+		text-align-last:justify; 
+		width: 235px;
+	}
+	h4{
+		margin: 0;
+		font-size: 18px;
+	}
+	p{
+		margin: 0;
+		font-size: 14px;
+		color: rgb(204,203,203);
+	}
 }
 .new{
 	.new-world-img{
@@ -205,9 +297,25 @@ nav>a:link,a:visited,a:hover,a:active{
 		min-width: 1280px-426.7px;
 		height: 565px;
 		text-align: center;
-		background: url(../../src/images/second_background.png) no-repeat;
+		background: url(../../src/images/second_background.png) no-repeat top left;
 		background-size: cover;
 		float: left;
+		font-family: $w;
+		position: relative;
+		// for triangle
+		h1{
+			font-size:157.79px;
+			line-height: 158px;
+			margin:0 auto 35px;
+		}
+		h2{
+			font-size: 49.47px;
+			margin: 130px auto 10px;
+		}
+		h3{
+			font-size: 21.91px;
+			margin: 0 auto 25px;
+		}
 	}
 	.new-world-box{
 		width: 33.3%;
@@ -218,6 +326,48 @@ nav>a:link,a:visited,a:hover,a:active{
 		.box-content{
 			display: inline-block;
 			width: 285px;
+			h3{
+				font-family: $h;
+				font-size: 21px;
+				margin: 160px auto 30px;
+			}
+			p{
+				font-family: $w;
+				font-size: 12px;
+				line-height: 32px;
+				margin: 0 auto 50px;
+				text-align: left;
+			}
+			.border-red{
+				margin: 0 auto 20px;
+				width: 105px;
+				height: 30px;
+				a:link,a:visited,a:hover,a:active{
+					color: $red;
+					text-decoration: none;
+				}
+				a{
+					line-height: 30px;
+				}
+			}
+			ul{
+				list-style: none;
+				width: 60px;
+				margin: 0 auto;
+				padding: 0;
+				text-align-last:justify;
+				li{
+					display: inline-block;
+					width: 8px;
+					height: 8px;
+					border: 1px solid #929293;
+					border-radius: 4px;
+				}
+				li:hover{
+					background: #929293;
+				}
+			}
+
 		}
 		
 	}
@@ -246,6 +396,38 @@ nav>a:link,a:visited,a:hover,a:active{
 		height: 520px;
 		text-align: center;
 		float: left;
+		font-family: $h;
+		hr{
+			width: 30px;
+			height: 2px;
+			border: none;
+			margin: 25px auto 25px;
+		}
+		h3{
+			font-size: 21px;
+		}
+		h3:first-of-type{
+			margin: 170px auto 10px;
+		}
+		div{
+			width: 170px;
+			height: 40px;
+			margin: 0 auto;
+			a:link,a:visited,a:hover,a:active{
+					color: $red;
+					text-decoration: none;
+			}
+			a{
+				line-height: 40px;
+			}
+		}
+		.border-white{
+			border: 1px solid #fff;
+			a:link,a:visited,a:hover,a:active{
+					color: #fff;
+					text-decoration: none;
+			}
+		}
 	}
 	.new-box{
 		width: 100%;
@@ -254,25 +436,41 @@ nav>a:link,a:visited,a:hover,a:active{
 .join{
 	height: 750px;
 	text-align: center;
+	h3{
+		font-family: $h;
+		font-size: 21px;
+		margin: 120px 0 0;
+	}
+	p{
+		font-family: $w;
+		font-size: 12px;
+	}
 	>hr{
 		width: 30px;
 		height: 2px;
+		border: none;
+		margin: 10px auto 15px;
+	}
+	>p:last-of-type{
+		margin-bottom: 105px;
 	}
 	.join-rule{
 		width: 290px;
 		float: left;
 		text-align: left;
 		h4{
-			margin: 0 0 10px;
+			margin: 0 0 25px;
 		}
 		p{
-			margin: 0;
+			margin: 0 0 10px;
+			color: rgb(157,155,154);
 		}
 		.join-right{
 			text-align: right;
-		}
-		a{
-			
+			a:link,a:visited,a:hover,a:active{
+				color: rgb(157,155,154);
+				text-decoration: none;
+			}
 		}
 	}
 	form{
@@ -285,21 +483,27 @@ nav>a:link,a:visited,a:hover,a:active{
 			min-width: 200px;
 			height: 35px;
 		}
+		.input-box{
+			width: 50vw;
+			min-width: 640px;
+			text-align-last:justify;
+			display: inline-block;
+		}
 		.input{
 			width: 24.2vw;
 			min-width: 310px;
 			height: 40px;
 			display: inline-block;
-			margin: 0 18px 13px 0px;
+			margin: 0 0 13px 0px;
 			line-height: 40px;
-			text-align: left;
+			text-align-last: left;
 		}
 		.textarea{
 			width: 50vw;
 			min-width: 640px;
 			height: 120px;
 			display: inline-block;
-			margin: 0 18px 13px 0px;
+			margin: 0 0 13px 0px;
 			position: relative;
 			label{
 				position: absolute;
@@ -318,10 +522,13 @@ nav>a:link,a:visited,a:hover,a:active{
 			min-width: 640px;
 			height: 40px;
 			border: none;
-			margin-right: 18px;
+			font-family: $h;
+			font-size: 14px;
 		}
 		label{
 			margin-left: 15px;
+			font-family: $s;
+			font-size: 12px;
 		}
 	}
 }
@@ -329,15 +536,28 @@ nav>a:link,a:visited,a:hover,a:active{
 	background: rgb(50,54,62);
 	height: 360px;
 	text-align: center;
+	overflow: hidden;
+	h3{
+		font-family: $h;
+		font-size: 21px;
+		margin: 90px auto 10px;
+	}
+	p{
+		margin: 0 0 5px;
+	}
+	>p:last-of-type{
+		margin: 0 0 30px;
+	}
 	form{
 		width: 40vw;
 		min-width: 510px;
 		display: inline-block;
+		margin-bottom: 35px;
 		input{
 			width: 33.5vw;
 			min-width: 425px;
-			border: 2px solid #989a9e;
-			height: 36px;
+			border: none;
+			height: 40px;
 			padding: 0;
 			float: left;
 		}
@@ -350,6 +570,17 @@ nav>a:link,a:visited,a:hover,a:active{
 			height: 40px;
 			padding: 0;
 			float: left;
+			font-family: $w;
+			font-size: 15px;
+		}
+	}
+	.awesome{
+		margin: 0 auto;
+		width: 200px;
+		text-align-last: justify;
+		a:link,a:visited,a:hover,a:active{
+				color: #fff;
+				text-decoration: none;
 		}
 	}
 }

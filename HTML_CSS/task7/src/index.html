@@ -5,11 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="../dist/css/base.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
-	<nav class="background-white col-90">
+	<nav class="background-white ">
+		<div class="col-90">
 		<p><img src="images/logo.png">新世界</p>
-		<a href="#"><img src="images/user_icon.png">登录</a>
+		<a href="#" class="log-in"><img src="images/user_icon.png">登录</a>
 		<!-- 本打算用font-awesome，不过还是算了 -->
 		<ul>
 			<li><a href="">首页</a></li>
@@ -18,6 +20,7 @@
 			<li><a href="">爱心社区</a></li>
 			<li><a href="">关于我们</a></li>
 		</ul>
+		</div>
 	</nav>
 	<section>
 		<div class="lead">
@@ -63,7 +66,7 @@
 			</div>
 			<div class="information-map">
 				<h3 class="font-white">查找新世界城市活动信息</h3>
-				<hr class="font-white">
+				<hr class="font-white background-white">
 				<p class="font-white">每个城市都有不同的活动信息，请自主查询您所需要了解的城市</p>
 				<form>
 					<select name="" id="">
@@ -87,22 +90,22 @@
 				<div class="activity-show" >
 					<img src="images/activity-1.png" alt="">
 					<h4>北京活动</h4>
-					<p></p>
+					<p>新社区大联盟</p>
 				</div>
 				<div class="activity-show">
 					<h3>上海活动</h3>
-					<p></p>
+					<p>夜上海新景观探索</p>
 					<img src="images/activity-2.png" alt="">
 				</div>
 				<div class="activity-show">
 					<img src="images/activity-3.png" alt="">
 					<h4>深圳活动</h4>
-					<p></p>
+					<p>全新海岸线观点站</p>
 				</div>
 				<div class="activity-show">
 					<img src="images/activity-4.png" alt="">
 					<h4>郑州活动</h4>
-					<p></p>
+					<p>奢饰消费大派送</p>
 				</div>
 			</div>
 		</div>
@@ -117,29 +120,29 @@
 				</div>
 				<div class="new-world-box background-white">
 					<div class="box-content">
-					<h3>新世界<span class="oblique">/</span><span class="red_font">01</span></h3>
+					<h3>新世界<span class="oblique">/</span><span class="font-red">01</span></h3>
 					<p>新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界</p>
-					<div class="red_border"><a href="#" class="red">更多详情</a></div>
-					<div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
+					<div class="border-red"><a href="#" class="red">更多详情</a></div>
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="new-box">
-				<div class="new-box-content background-red">
+				<div class="new-box-content background-red font-white">
 					<h3>新时代</h3>
 					<h3>关于爱生活的我们</h3>
-					<hr>
-					<div class=""><a href="#" class="white">查看更多</a></div>
+					<hr class="font-white background-white">
+					<div class="border-white"><a href="#">查看更多</a></div>
 				</div>
 				<div class="new-box-content background-white">
 					<h3>新时代</h3>
 					<h3>关于爱生活的我们</h3>
-					<hr>
-					<div class="red_border"><a href="#" class="red">查看更多</a></div>
+					<hr class="font-red background-red">
+					<div class="border-red"><a href="#" class="red">查看更多</a></div>
 				</div>
 				<div class="new-box-img">
 					<div class="left_triangle"></div>
@@ -155,19 +158,23 @@
 				<div class="join-rule">
 					<h4>新世界志愿者协议</h4>
 					<p>加入新世界志愿者的人员必须遵守中华人民共和国的相关法律法规，并本着平等资源的原则……</p>
-					<div class="join-right"><a href="#">more</a></div>
+					<div class="join-right"><a href="#">∨ more</a></div>
 					<!-- 不想用hover搞什么遮住诶，还要打好些字，直接做成链接吧~ -->
 					<h4>新世界志愿者协议</h4>
 					<p>加入新世界志愿者的人员必须遵守中华人民共和国的相关法律法规，并本着平等资源的原则……</p>
-					<div class="join-right"><a href="#">more</a></div>
+					<div class="join-right"><a href="#">∨ more</a></div>
 					<h4>新世界志愿者协议</h4>
-					<div class="join-right"><a href="#">more</a></div>
+					<div class="join-right"><a href="#">∨ more</a></div>
 				</div>
 				<form>
-					<div class="background-grey input"><label for="form_name">姓名：</label><input type="text" name="name" id='form_name' ></div>
-					<div class="background-grey input"><label for="form_age">年龄：</label><input type="text" name="age" id='form_age'></div>
-					<div class="background-grey input"><label for="form_tel">联系方式：</label><input type="text" name="tel" id='form_tel'></div>
-					<div class="background-grey input"><label for="form-address">联系地址：</label><input type="text" name="address" id='form-address'></div>
+					<div class="input-box">
+						<div class="background-grey input"><label for="form_name">姓名：</label><input type="text" name="name" id='form_name' ></div>
+						<div class="background-grey input"><label for="form_age">年龄：</label><input type="text" name="age" id='form_age'></div>
+					</div>
+					<div class="input-box">
+						<div class="background-grey input"><label for="form_tel">联系方式：</label><input type="text" name="tel" id='form_tel'></div>
+						<div class="background-grey input"><label for="form-address">联系地址：</label><input type="text" name="address" id='form-address'></div>
+					</div>
 					<div class="textarea">
 						<label for="form_hope">请简单描述您梦想的生活：</label>
 						<textarea name='hope' class="background-grey" id="form_hope"></textarea>
@@ -177,12 +184,26 @@
 			</div>
 		</div>
 		<div class="font-white contact">
-			<h2>联系我们</h2>
+			<h3>联系我们</h3>
 			<p>为了获取我们最新的公益资讯，您可以留下您的邮箱快速订阅我们的产品资讯</p>
 			<p>也可以通过以下任何方式关注我们的动态</p>
 			<form>
-				<input type="text" name="e-mail"><button>提交</button>
+				<input type="text" name="e-mail"><button class="font-white">提 交</button>
 			</form>
+			<div class="awesome">
+			<a href="#">
+				<i class="fa fa-qq fa-2x" aria-hidden="true"></i>
+			</a>
+			<a href="#">
+				<i class="fa fa-weibo fa-2x" aria-hidden="true"></i>
+			</a>
+			<a href="#">
+				<i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+			</a>
+			<a href="#">
+				<i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+			</a>
+			</div>
 		</div>
 	</section>
 	<footer>
