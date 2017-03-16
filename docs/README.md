@@ -74,4 +74,11 @@
     + 但实际使用中发现设计的都是有规律的，大部分都可以用语义化来解决，h3标签和p标签的固定设置基本上可以覆盖大部分内容
 - 最后四个图标不用awesome库的话只能用图了，最后还是引入了库
 # task8
-## 
+## 任务难点
+- 让网格间保持距离，即列间空白
+    + bootstrap讲解布局页面采用的方法(布局)[https://bootstrap.ninghao.net/scaffolding.html]
+        * 元素定宽，使用margin
+        * bootstrap本身也是采用pading的方法
+    + 由于修改了box-sizing,padding被计入，所以使用padding控制间距
+    + CSS官方网格布局(网格)[https://www.w3cplus.com/css3/line-base-placement-layout.html]
+
