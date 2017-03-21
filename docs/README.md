@@ -81,4 +81,14 @@
         * bootstrap本身也是采用pading的方法
     + 由于修改了box-sizing,padding被计入，所以使用padding控制间距
     + CSS官方网格布局(网格)[https://www.w3cplus.com/css3/line-base-placement-layout.html]
+# task9
+## 任务难点
+- 
+## 学到的经验
+- 当CSS像素有可能出现小数点时你不知道会出现什么样的问题
+- 颜色超多的时候就不要想着复用啦，你看灰色有那么多种\
+## 遇到的问题
+- .tab子元素div插入text时，div下移，此时div已成为BFC容器，为何div会下移？
+    + 初步猜测是基线原因：在不指定 vertical-align 時，默認即基線對齊。然而由於該 box 當中既沒有 block level box 也沒有 text（比如全是 floating boxes，沒有規範的可以提取基線的地方），導致對齊時以該元素底部而非基線爲基準，又因爲元素底部在基線以下，就會出現對齊時上移的情況。（包含 float 的 inline-block 对齐问题原理详解？ ）[https://segmentfault.com/q/1010000002517202]
+    + 设置overflow后形成block level box解决
 
