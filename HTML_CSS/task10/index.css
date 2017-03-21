@@ -1,0 +1,45 @@
+body{
+	padding: 20px;
+}
+body>div{
+	width: 150px;
+	border: 1px solid red;
+	margin-bottom: 20px;
+}
+.item1{
+	height: 120px;
+}
+.item2{
+	height: 100px;
+}
+.item3{
+	height: 40px;
+}
+.item4{
+	height: 200px;
+	border-color: blue;
+}
+body{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	min-width: 490px;
+}
+@media screen and (min-width: 640px){
+	body{
+		flex-wrap: nowrap;
+		align-items: center;
+	}
+}
+@media screen and (max-width: 640px){
+	body{
+		flex-wrap: wrap;
+		align-items: top;
+	}
+	.item4{
+		order: 1;
+	}
+	.item1,.item2,.item3{
+		order: 2;
+	}
+}
