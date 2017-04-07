@@ -120,6 +120,17 @@ nav {
   width: 1020px;
   height: 1210px;
   background: #eeeeed; }
+  #right .bar p {
+    background-color: white;
+    color: #b7b7b7;
+    font-family: SimHei;
+    font-size: 12px;
+    padding-left: 20px;
+    line-height: 30px; }
+    #right .bar p span {
+      padding: 0 10px 0; }
+    #right .bar p .blue {
+      color: #228abf; }
   #right .row {
     width: 890px;
     margin: 0 auto; }
@@ -197,7 +208,9 @@ nav {
         width: 4px;
         height: 70px;
         margin: 0;
-        border: none; }
+        border: none;
+        position: relative;
+        top: -1px; }
       #right .statistics > div > div:nth-of-type(1) {
         margin-left: 11px;
         float: left;
@@ -255,17 +268,18 @@ nav {
         border-collapse: collapse;
         font-size: 12px; }
         #right .check .item .item-table table td {
-          padding: 8px;
-          width: 100px; }
-      #right .check .item .item-table th {
-        border: 1px solid #d7d7d8;
-        width: 100px;
-        height: 30px;
-        line-height: 30px;
-        text-align-last: center;
-        font-family: SimSun;
-        color: #636363; }
-      #right .check .item .item-table tr > th:first-child {
+          padding-left: 8px;
+          text-align: left;
+          border: 1px solid #d7d7d8;
+          width: 100px;
+          height: 30px;
+          line-height: 30px;
+          text-align-last: left;
+          font-family: SimSun;
+          color: #636363; }
+      #right .check .item .item-table tr:first-child > td:first-child {
+        background-color: #f4f5f6; }
+      #right .check .item .item-table tr > td:first-child {
         color: #000; }
       #right .check .item .item-table tbody > tr:nth-of-type(1) > th:first-child {
         color: #636363;

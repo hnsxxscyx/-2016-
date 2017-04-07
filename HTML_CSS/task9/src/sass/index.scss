@@ -147,6 +147,22 @@ nav {
     width: 1020px;
     height: 1210px;
     background: rgb(238, 238, 237);
+    .bar {
+        p {
+            background-color: white;
+            color: #b7b7b7;
+            font-family: SimHei;
+            font-size: 12px;
+            padding-left: 20px;
+            line-height: 30px;
+            span {
+                padding: 0 10px 0;
+            }
+            .blue {
+                color: #228abf;
+            }
+        }
+    }
     .row {
         width: 890px;
         margin: 0 auto;
@@ -244,6 +260,8 @@ nav {
                 height: 70px;
                 margin: 0;
                 border: none;
+                position: relative;
+                top: -1px;
             }
             >div:nth-of-type(1) {
                 margin-left: 11px;
@@ -328,20 +346,21 @@ nav {
                     border-collapse: collapse;
                     font-size: 12px;
                     td {
-                        padding: 8px;
+                        padding-left: 8px;
+                        text-align: left;
+                        border: 1px solid #d7d7d8;
                         width: 100px;
+                        height: 30px;
+                        line-height: 30px;
+                        text-align-last: left;
+                        font-family: SimSun;
+                        color: #636363;
                     }
                 }
-                th {
-                    border: 1px solid #d7d7d8;
-                    width: 100px;
-                    height: 30px;
-                    line-height: 30px;
-                    text-align-last: center;
-                    font-family: SimSun;
-                    color: #636363;
+                tr:first-child>td:first-child {
+                    background-color: #f4f5f6;
                 }
-                tr>th:first-child {
+                tr>td:first-child {
                     color: #000;
                 }
                 tbody>tr:nth-of-type(1)>th:first-child {
