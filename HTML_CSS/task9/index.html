@@ -52,9 +52,13 @@
             <form class="row search">
                 <div class="width-150">
                     <label>查询项</label>
-                    <select>
-						<option>第一项</option>
-					</select>
+                    <ul class="drop-list">
+                        <li>第一项</li>
+                        <div class="drop-menu">
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </ul>
                 </div>
                 <div class="width-190">
                     <div class="select-change">
@@ -66,16 +70,41 @@
                     </div>
                     <div>
                         <label>买方</label>
-                        <select>
-							<option>A</option>
-						</select>
+                        <ul class="drop-list">
+                            <li>小A</li>
+                            <div class="drop-menu">
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </ul>
                         <label>卖方</label>
-                        <select>
-							<option>B</option>
-						</select>
+                        <ul class="drop-list">
+                            <li>小C</li>
+                            <div class="drop-menu">
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </ul>
                     </div>
                 </div>
-                <div class="width-290"></div>
+                <div class="width-290">
+                    <label>日期</label>
+                    <ul>
+                        <li>2016-04-01</li>
+                    </ul>
+                    <label>总耗时</label>
+                    <ul>
+                        <li>2016-04-01</li>
+                    </ul>
+                    <label>人数</label>
+                    <ul>
+                        <li>2016-04-01</li>
+                    </ul>
+                    <label>成交项</label>
+                    <ul>
+                        <li>2016-04-01</li>
+                    </ul>
+                </div>
                 <button>搜索</button>
             </form>
             <div class="row tab">
@@ -143,6 +172,11 @@
                         <div class="yellow vertical-center"></div>
                     </div>
                 </div>
+                <div id="try">
+                    <div>
+                        <div></div>
+                    </div>
+                </div>
                 <div class="row check">
                     <div class="item">
                         <h4>第一组项目</h4>
@@ -202,7 +236,6 @@
                             <div class="item-form-title"><label>标题</label>
                                 <p>项目报表三</p>
                             </div>
-
                             <div class="item-form-price"><label for="">价格</label>
                                 <p>￥158</p>
                             </div>
@@ -217,6 +250,7 @@
                             </div>
                             <label for=""></label>
                         </form>
+
                     </div>
                     <div class="calendar">
                         <h4>日历</h4>
@@ -366,54 +400,103 @@
                         <h4>汽车行业品牌榜</h4>
                         <table>
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <th>排名</th>
+                                <th>品牌</th>
+                                <th>搜索指数</th>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>1</td>
+                                <td>大众</td>
+                                <td>
+                                    <span>48912001</span>
+                                    <div class="bar">
+                                        <div class="bar-color"></div>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>2</td>
+                                <td>丰田</td>
+                                <td>
+                                    <span>29307333</span>
+                                    <div class="bar">
+                                        <div class="bar-color"></div>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>3</td>
+                                <td>奥迪</td>
+                                <td>
+                                    <span>23139070</span>
+                                    <div class="bar">
+                                        <div class="bar-color"></div>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>4</td>
+                                <td>本田</td>
+                                <td>
+                                    <span>22885564</span>
+                                    <div class="bar">
+                                        <div class="bar-color"></div>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>5</td>
+                                <td>福特</td>
+                                <td><span>22324792</span>
+                                    <div class="bar">
+                                        <div class="bar-color"></div>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>6</td>
+                                <td>宝马</td>
+                                <td><span>21444077</span>
+                                    <div class="bar">
+                                        <div class="bar-color"></div>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>7</td>
+                                <td>现代</td>
+                                <td><span>20114969</span>
+                                    <div class="bar">
+                                        <div class="bar-color"></div>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>8</td>
+                                <td>起亚</td>
+                                <td><span>19251680</span>
+                                    <div class="bar">
+                                        <div class="bar-color"></div>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>9</td>
+                                <td>奔驰</td>
+                                <td><span>19172837</span>
+                                    <div class="bar">
+                                        <div class="bar-color"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>别克</td>
+                                <td><span>18544027</span>
+                                    <div class="bar">
+                                        <div class="bar-color"></div>
+                                    </div>
+                                </td>
                             </tr>
                         </table>
                     </div>

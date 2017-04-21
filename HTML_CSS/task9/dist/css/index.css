@@ -11,6 +11,9 @@ h6,
 hr {
   margin: 0; }
 
+.item-form > form ~ h4 {
+  background: #fff; }
+
 *:before,
 *:after {
   box-sizing: border-box; }
@@ -63,6 +66,21 @@ a:visited {
   position: relative;
   top: 50%;
   transform: translate(0, -50%); }
+
+.drop-menu {
+  float: right;
+  display: inline-block;
+  margin-top: -9px; }
+  .drop-menu div {
+    display: block; }
+  .drop-menu div:first-child {
+    border: 6px solid transparent;
+    border-top-color: #fff;
+    position: relative;
+    top: 9px; }
+  .drop-menu div:last-child {
+    border: 6px solid transparent;
+    border-top-color: #000; }
 
 nav {
   width: 100%;
@@ -138,18 +156,28 @@ nav {
     height: 85px;
     border: 1px solid #dddfe1;
     margin: 20px auto 10px;
-    background: #fff; }
-    #right .search select {
-      height: 25px;
-      border: 1px solid #b9babd; }
+    background: #fff;
+    font-family: SimHei;
+    font-size: 12px;
+    line-height: 25px; }
+    #right .search ul {
+      display: inline-block;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border: 1px solid #c2c3c4; }
+      #right .search ul li {
+        display: inline-block; }
     #right .search .width-150 {
       width: 150px; }
-      #right .search .width-150 select {
+      #right .search .width-150 ul {
         width: 68px; }
     #right .search .width-190 {
       width: 190px; }
-      #right .search .width-190 select {
+      #right .search .width-190 ul {
         width: 120px; }
+      #right .search .width-190 label {
+        margin-right: 16px; }
       #right .search .width-190 .select-change {
         float: right; }
       #right .search .width-190 .border-grey {
@@ -311,34 +339,34 @@ nav {
         top: 23px;
         border-radius: 5px;
         border-top-left-radius: 0; }
-    #right .check .item-form {
+    #right .check .check table > tbody > tr:first-child > td:nth-child(2) .item-form {
       font-family: Microsoft YaHei; }
-      #right .check .item-form form {
+      #right .check .check table > tbody > tr:first-child > td:nth-child(2) .item-form form {
         text-align-last: left;
         width: 280px;
         margin: 15px 0 0 35px;
         font-size: 12px; }
-        #right .check .item-form form label {
+        #right .check .check table > tbody > tr:first-child > td:nth-child(2) .item-form form label {
           color: #dddedd;
           margin-bottom: 5px;
           margin-left: 10px; }
-        #right .check .item-form form p {
+        #right .check .check table > tbody > tr:first-child > td:nth-child(2) .item-form form p {
           margin-left: 10px;
           margin-bottom: 9px; }
-        #right .check .item-form form .item-form-title {
+        #right .check .check table > tbody > tr:first-child > td:nth-child(2) .item-form form .item-form-title {
           border-bottom: 1px solid #e0e0e0; }
-        #right .check .item-form form .item-form-price {
+        #right .check .check table > tbody > tr:first-child > td:nth-child(2) .item-form form .item-form-price {
           height: 40px;
           float: left;
           width: 95px;
           border-right: 1px solid #e0e0e0;
           border-bottom: 1px solid #e0e0e0; }
-        #right .check .item-form form .item-form-people {
+        #right .check .check table > tbody > tr:first-child > td:nth-child(2) .item-form form .item-form-people {
           height: 40px;
           width: 185px;
           float: left;
           position: relative; }
-          #right .check .item-form form .item-form-people hr {
+          #right .check .check table > tbody > tr:first-child > td:nth-child(2) .item-form form .item-form-people hr {
             width: 220px;
             height: 1px;
             color: #e0e0e0;
@@ -346,7 +374,7 @@ nav {
             border: none;
             position: absolute;
             bottom: 0; }
-        #right .check .item-form form .item-form-detail {
+        #right .check .check table > tbody > tr:first-child > td:nth-child(2) .item-form form .item-form-detail {
           width: 100%;
           height: 145px;
           border-bottom: 1px solid #e0e0e0; }
@@ -362,3 +390,83 @@ nav {
     #right .check .calendar tr > td:nth-of-type(6) > p:first-child,
     #right .check .calendar tr > td:nth-of-type(7) > p:first-child {
       color: red; }
+    #right .check .list table {
+      font-family: SimHei;
+      border-collapse: collapse;
+      background: #fff;
+      text-align: center;
+      margin: 17px 0 0 40px; }
+      #right .check .list table tr:hover {
+        background: #f4f5f6; }
+      #right .check .list table tr:nth-of-type(2) {
+        background: #f4f5f6; }
+      #right .check .list table tr th,
+      #right .check .list table tr td {
+        height: 23px;
+        line-height: 23px;
+        border: 1px solid #c8c9ca; }
+      #right .check .list table tr th {
+        font-size: 13px;
+        font-weight: bold; }
+      #right .check .list table tr td {
+        font-size: 12px; }
+      #right .check .list table tr th:nth-of-type(1) {
+        width: 65px; }
+      #right .check .list table tr th:nth-of-type(2) {
+        width: 90px; }
+      #right .check .list table tr > th:nth-of-type(3) {
+        width: 290px; }
+      #right .check .list table tr td span {
+        display: inline-block;
+        width: 85px;
+        text-align-last: right;
+        margin-right: 15px; }
+      #right .check .list table tr td .bar {
+        height: 3px;
+        width: 166px;
+        position: relative;
+        background: #ddd;
+        display: inline-block;
+        vertical-align: middle; }
+      #right .check .list table tr td .bar-color {
+        height: 100%;
+        background: #7ecaf0; }
+      #right .check .list table tr:last-child > td {
+        border-bottom: none; }
+      #right .check .list table tr:nth-of-type(2) .bar-color {
+        width: 140px;
+        background: #ed6e52; }
+      #right .check .list table tr:nth-of-type(3) .bar-color {
+        width: 120px;
+        background: #ef8150; }
+      #right .check .list table tr:nth-of-type(4) .bar-color {
+        width: 103px;
+        background: #f19f4f; }
+      #right .check .list table tr:nth-of-type(5) .bar-color {
+        width: 96px; }
+      #right .check .list table tr:nth-of-type(6) .bar-color {
+        width: 85px; }
+      #right .check .list table tr:nth-of-type(7) .bar-color {
+        width: 80px; }
+      #right .check .list table tr:nth-of-type(8) .bar-color {
+        width: 73px; }
+      #right .check .list table tr:nth-of-type(9) .bar-color {
+        width: 60px; }
+      #right .check .list table tr:nth-of-type(10) .bar-color {
+        width: 57px; }
+      #right .check .list table tr:nth-of-type(11) .bar-color {
+        width: 53px; }
+
+#try {
+  width: 200px;
+  height: 200px;
+  background: #fff; }
+  #try > div {
+    width: 100px;
+    height: 100px;
+    background: #111;
+    margin: 0 auto; }
+    #try > div > div {
+      width: 50px;
+      height: 50px;
+      background: #ddd; }
