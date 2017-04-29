@@ -67,18 +67,18 @@ a:visited {
   top: 50%;
   transform: translate(0, -50%); }
 
-.drop-menu {
+.drop-icon-caret {
   float: right;
   display: inline-block;
   margin-top: -9px; }
-  .drop-menu div {
+  .drop-icon-caret div {
     display: block; }
-  .drop-menu div:first-child {
+  .drop-icon-caret div:first-child {
     border: 6px solid transparent;
     border-top-color: #fff;
     position: relative;
     top: 9px; }
-  .drop-menu div:last-child {
+  .drop-icon-caret div:last-child {
     border: 6px solid transparent;
     border-top-color: #000; }
 
@@ -113,7 +113,14 @@ nav {
     padding-left: 18px;
     background: url(../../src/images/sign.png) no-repeat; }
   .nav-content input {
-    right: 20px; }
+    right: 20px;
+    width: 310px;
+    height: 25px;
+    border: none;
+    border-radius: 25px;
+    background: url("../../src/images/search.png") no-repeat 15px;
+    background-color: #fff;
+    padding-left: 35px; }
 
 #left {
   width: 260px;
@@ -380,7 +387,30 @@ nav {
           border-bottom: 1px solid #e0e0e0; }
     #right .check .calendar .calendar-detail {
       width: 310px;
+      height: 22px;
       margin-left: 20px; }
+      #right .check .calendar .calendar-detail > .calendar-choice {
+        text-align-last: justify;
+        height: 20px;
+        padding: 0 2px;
+        margin: 10px 0; }
+        #right .check .calendar .calendar-detail > .calendar-choice > .drop-menu {
+          display: inline-block;
+          border: 1px solid #adadad;
+          height: 20px;
+          vertical-align: top; }
+          #right .check .calendar .calendar-detail > .calendar-choice > .drop-menu p {
+            font-size: 12px;
+            font-family: Simhei;
+            margin: 0;
+            padding: 0;
+            line-height: 20px; }
+          #right .check .calendar .calendar-detail > .calendar-choice > .drop-menu .drop-caret {
+            border: 3px solid transparent;
+            border-bottom: 0;
+            border-top-color: #adadad;
+            margin-top: 9px;
+            float: right; }
     #right .check .calendar .week {
       text-align-last: justify;
       line-height: 30px;
@@ -456,17 +486,3 @@ nav {
         width: 57px; }
       #right .check .list table tr:nth-of-type(11) .bar-color {
         width: 53px; }
-
-#try {
-  width: 200px;
-  height: 200px;
-  background: #fff; }
-  #try > div {
-    width: 100px;
-    height: 100px;
-    background: #111;
-    margin: 0 auto; }
-    #try > div > div {
-      width: 50px;
-      height: 50px;
-      background: #ddd; }
