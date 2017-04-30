@@ -490,7 +490,9 @@ nav {
             }
         }
         .calendar {
+            font-size: 12px;
             .calendar-detail {
+                font-family: Simhei;
                 width: 310px;
                 height: 22px;
                 margin-left: 20px;
@@ -505,19 +507,43 @@ nav {
                         height: 20px;
                         vertical-align: top;
                         p {
-                            font-size: 12px;
-                            font-family: Simhei;
                             margin: 0;
                             padding: 0;
-                            line-height: 20px;
+                            line-height: 18px;
                         }
                         .drop-caret {
                             border: 3px solid transparent;
                             border-bottom: 0;
                             border-top-color: #adadad;
-                            margin-top: 9px;
+                            margin-top: 8px;
                             float: right;
                         }
+                    }
+                    .calendar-choice-year {
+                        span {
+                            display: inline-block;
+                        }
+                        .drop-content {
+                            padding: 0 5px;
+                            border-right: 1px solid #f5f6f7;
+                        }
+                        .drop-caret {
+                            margin-left: 5px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+                >.date {
+                    padding-left: 10px;
+                    td {
+                        width: 40px;
+                        height: 40px;
+                    }
+                    .date-active {
+                        border: 1px solid #f6c62b;
+                    }
+                    .festival {
+                        color: red;
                     }
                 }
             }
@@ -526,7 +552,8 @@ nav {
                 line-height: 30px;
                 border-top: 1px solid #a9cfec;
                 border-bottom: 1px solid #e1e1e1;
-                font-size: 12px;
+                padding: 0 20px;
+                padding-left: 25px;
             }
             tr>td:nth-of-type(6)>p:first-child,
             tr>td:nth-of-type(7)>p:first-child {

@@ -385,41 +385,60 @@ nav {
           width: 100%;
           height: 145px;
           border-bottom: 1px solid #e0e0e0; }
-    #right .check .calendar .calendar-detail {
-      width: 310px;
-      height: 22px;
-      margin-left: 20px; }
-      #right .check .calendar .calendar-detail > .calendar-choice {
-        text-align-last: justify;
-        height: 20px;
-        padding: 0 2px;
-        margin: 10px 0; }
-        #right .check .calendar .calendar-detail > .calendar-choice > .drop-menu {
-          display: inline-block;
-          border: 1px solid #adadad;
-          height: 20px;
-          vertical-align: top; }
-          #right .check .calendar .calendar-detail > .calendar-choice > .drop-menu p {
-            font-size: 12px;
-            font-family: Simhei;
-            margin: 0;
-            padding: 0;
-            line-height: 20px; }
-          #right .check .calendar .calendar-detail > .calendar-choice > .drop-menu .drop-caret {
-            border: 3px solid transparent;
-            border-bottom: 0;
-            border-top-color: #adadad;
-            margin-top: 9px;
-            float: right; }
-    #right .check .calendar .week {
-      text-align-last: justify;
-      line-height: 30px;
-      border-top: 1px solid #a9cfec;
-      border-bottom: 1px solid #e1e1e1;
+    #right .check .calendar {
       font-size: 12px; }
-    #right .check .calendar tr > td:nth-of-type(6) > p:first-child,
-    #right .check .calendar tr > td:nth-of-type(7) > p:first-child {
-      color: red; }
+      #right .check .calendar .calendar-detail {
+        font-family: Simhei;
+        width: 310px;
+        height: 22px;
+        margin-left: 20px; }
+        #right .check .calendar .calendar-detail > .calendar-choice {
+          text-align-last: justify;
+          height: 20px;
+          padding: 0 2px;
+          margin: 10px 0; }
+          #right .check .calendar .calendar-detail > .calendar-choice > .drop-menu {
+            display: inline-block;
+            border: 1px solid #adadad;
+            height: 20px;
+            vertical-align: top; }
+            #right .check .calendar .calendar-detail > .calendar-choice > .drop-menu p {
+              margin: 0;
+              padding: 0;
+              line-height: 18px; }
+            #right .check .calendar .calendar-detail > .calendar-choice > .drop-menu .drop-caret {
+              border: 3px solid transparent;
+              border-bottom: 0;
+              border-top-color: #adadad;
+              margin-top: 8px;
+              float: right; }
+          #right .check .calendar .calendar-detail > .calendar-choice .calendar-choice-year span {
+            display: inline-block; }
+          #right .check .calendar .calendar-detail > .calendar-choice .calendar-choice-year .drop-content {
+            padding: 0 5px;
+            border-right: 1px solid #f5f6f7; }
+          #right .check .calendar .calendar-detail > .calendar-choice .calendar-choice-year .drop-caret {
+            margin-left: 5px;
+            margin-right: 5px; }
+        #right .check .calendar .calendar-detail > .date {
+          padding-left: 10px; }
+          #right .check .calendar .calendar-detail > .date td {
+            width: 40px;
+            height: 40px; }
+          #right .check .calendar .calendar-detail > .date .date-active {
+            border: 1px solid #f6c62b; }
+          #right .check .calendar .calendar-detail > .date .festival {
+            color: red; }
+      #right .check .calendar .week {
+        text-align-last: justify;
+        line-height: 30px;
+        border-top: 1px solid #a9cfec;
+        border-bottom: 1px solid #e1e1e1;
+        padding: 0 20px;
+        padding-left: 25px; }
+      #right .check .calendar tr > td:nth-of-type(6) > p:first-child,
+      #right .check .calendar tr > td:nth-of-type(7) > p:first-child {
+        color: red; }
     #right .check .list table {
       font-family: SimHei;
       border-collapse: collapse;
