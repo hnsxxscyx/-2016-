@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<HTML lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -9,13 +9,54 @@
 </head>
 
 <body>
-    <form action="">
+    <div id='form'>
         <div>
             <label for="input">名称</label>
             <input type="text" id='input'>
             <button>验证</button>
         </div>
-    </form>
+    </div>
 </body>
+<script>
+    + function() {
+        var button = document.querySelector('button')
+        button.addEventListener('click', function() {
+            var val = input.value
+            var space = val.match(/\s/g)
+            var chineseNum = val.match(/[\u4e00-\u9fa5]/g)
+            var p = document.querySelector('#form>p')
+            if (p !== null) {
+                p.innerHTML = ''
+            } else {
+                p = document.createElement('p')
+            }
+            if (chineseNum == null) {
+                // null不会自动转换，邪了
+                chineseNum = 0
+            } else {
+                chineseNum = chineseNum.length
+            }
+            var form = document.querySelector('#form')
+            if (space) {
+                p.innerHTML = '对不起，不能输入空白符'
+                form.appendChild(p)
+            } else {
+                var num = val.length + chineseNum
+                if (num <= 16 && num >= 4) {
+                    p.innerHTML = '正确'
+                    form.appendChild(p)
+                } else {
+                    if (num === 0) {
+                        p.innerHTML = '请不要为空'
+                        form.appendChild(p)
+                    } else {
+                        p.innerHTML = '请输入字符数为4-16之间的字符串'
+                        form.appendChild(p)
+                    }
+                }
+            }
+        })
+    }()
+</script>
 
-</html>
+</HTML>
