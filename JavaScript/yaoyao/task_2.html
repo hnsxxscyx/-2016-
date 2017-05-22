@@ -98,7 +98,6 @@
             }
 
             function showAnswer(event) {
-                console.log('ij')
                 var trueArr = ['名称输入正确', '密码可用', '正确', '正确', '正确'],
                     falseArr = ['请输入正确名称', '密码格式错误', '输入错误', '输入错误', '输入错误']
                 var i = whichElement(event.target)
@@ -137,7 +136,10 @@
                         // 为啥不能用function
                         + function() {
                             if (!value.match(regexObj.space)) {
-                                var valueLength = value.length + value.match(regexObj.chinese).length
+                                if (value.match(regexObj.chinese))
+                                    var valueLength = value.length + value.match(regexObj.chinese).length
+                                else
+                                    var valueLength = value.length
                                 if (valueLength <= 16 && valueLength >= 4) {
                                     result = true
                                 }
