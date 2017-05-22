@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrong {
+            border-color: red;
+            color: red;
+        }
+        
+        .true {
+            border-color: greenyellow;
+            color: greenyellow;
+        }
+        
+        input {
+            width: 50vw;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        
+        input:focus {
+            border-color: blue;
+        }
+        
+        .form-item {
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        
+        button {
+            margin-left: 40vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <div class="form-item"><label for="name">名称</label><input type="text" id="name"></div>
+        <div class="form-item"><label for="password">密码</label><input type="text" id="password"></div>
+        <div class="form-item"><label for="password-verify">密码确认</label><input type="text" id="password-verify"></div>
+        <div class="form-item"><label for="email">邮箱</label><input type="text" id="email"></div>
+        <div class="form-item"><label for="phone">手机</label><input type="text" id="phone"></div>
+        <button>提交</button>
+    </div>
+    <script>
+        + function() {
+            // every input add event
+            var ndInput = document.querySelectorAll('input')
+            var i = 0
+            for (; i < ndInput.length; i++) {
+                //i is string ,but it can automatic transfer,so
+                ndInput[i].addEventListener('focus', showRule, false)
+                ndInput[i].addEventListener('blur', showAnswer, false)
+            }
+
+            function whichElement(obj) {
+                var i = -1;
+                for (i = ndInput.length; i > 0; i--) {
+                    if (obj === ndInput[i]) {
+                        break
+                    }
+                }
+                return i
+            }
+
+            function showRule(event) {
+                var string = ''
+                    //最好还是把字符串给分开来比较好吧，便于修改
+                switch (whichElement(event.target)) {
+                    case 0:
+                        string = '必填，长度为4~16个字符'
+                        break
+                    case 1:
+                        string = '请输入8~16位字符'
+                        break
+                    case 2:
+                        string = '再次输入相同的密码'
+                        break
+                    case 3:
+                        string = '请输入您的邮箱'
+                        break
+                    case 4:
+                        string = '请输入11位手机号'
+                        break
+                    default:
+                        console.log('error')
+                }
+                if (event.target.nextSibling) {
+                    event.target.nextSibling.innerHTML = string
+                } else {
+                    event.target.insertAdjacentHTML('afterend', '<p class="answer">' + string + '</p>')
+                }
+            }
+
+            function showAnswer(event) {
+                console.log('ij')
+                var trueArr = ['名称输入正确', '密码可用', '正确', '正确', '正确'],
+                    falseArr = ['请输入正确名称', '密码格式错误', '输入错误', '输入错误', '输入错误']
+                var i = whichElement(event.target)
+                val = event.target.value
+                if (verify(i, val)) {
+                    event.target.nextSibling.innerHTML = trueArr[i]
+                        // classList是HTML5新出现的api
+                    event.target.classList.add('true')
+                    event.target.nextSibling.classList.add('true')
+                    if (event.target.classList.length === 2) {
+                        event.target.classList.remove('wrong')
+                        event.target.nextSibling.classList.remove('wrong')
+                    }
+                } else {
+                    event.target.nextSibling.innerHTML = falseArr[i]
+                    event.target.classList.add('wrong')
+                    event.target.nextSibling.classList.add('wrong')
+                    if (event.target.classList.length === 2) {
+                        event.target.classList.remove('true')
+                        event.target.nextSibling.classList.remove('true')
+                    }
+                }
+            }
+
+            function verify(i, value) {
+                var regexObj = {
+                    space: /\s/g,
+                    chinese: /[\u4e00-\u9fa5]/g,
+                    email: /^([\w-_]+(?:\.[\w-_]+)*)@((?:[a-z0-9]+(?:-[a-zA-Z0-9]+)*)+\.[a-z]{2,6})$/i,
+                    phone: /^1\d{10}$|^(0\d{2,3}-?|\(0\d{2,3}\))?[1-9]\d{4,7}(-\d{1,8})?$/g
+                }
+                var character = 0,
+                    result = false
+                switch (i) {
+                    case 0:
+                        // 为啥不能用function
+                        + function() {
+                            if (!value.match(regexObj.space)) {
+                                var valueLength = value.length + value.match(regexObj.chinese).length
+                                if (valueLength <= 16 && valueLength >= 4) {
+                                    result = true
+                                }
+                            }
+                        }()
+                        break
+                    case 1:
+                        + function() {
+                            if (!(value.match(regexObj.space) || value.match(regexObj.chinese))) {
+                                var valueLength = value.length
+                                if (valueLength <= 16 && valueLength >= 8) {
+                                    result = true
+                                }
+                            }
+                        }()
+                        break
+                    case 2:
+                        + function() {
+                            if (document.querySelector('#password').value === value) {
+                                result = true
+                            }
+                        }()
+                        break
+                    case 3:
+                        + function() {
+                            if (!(value.match(regexObj.space))) {
+                                if (value.match(regexObj.email))
+                                    result = true
+                            }
+                        }()
+                        break
+                    case 4:
+                        + function() {
+                            // 因为是字符串，所以加eval函数来实现转换，使用Reg对象转换可能会有问题
+                            if (!(value.match(regexObj.space))) {
+                                if (value.match(regexObj.phone))
+                                    result = true
+                            }
+                        }()
+                        break
+                }
+                return result
+            }
+        }()
+    </script>
+</body>
+
+</html>
