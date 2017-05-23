@@ -57,6 +57,21 @@
                 ndInput[i].addEventListener('focus', showRule, false)
                 ndInput[i].addEventListener('blur', showAnswer, false)
             }
+            document.querySelector('button').addEventListener('click', submit, false)
+
+            function submit() {
+                // 本来想着使用模拟原生事件，没想原生事件这么不方便，所以在密码处做两次判断与验证
+                var result = true
+                for (i = 0; i < ndInput.length; i++) {
+                    if (ndInput[i].classList[0] !== 'true')
+                        result = false
+                }
+                if (result) {
+                    alert('提交成功')
+                } else {
+                    alert('失败')
+                }
+            }
 
             function whichElement(obj) {
                 var i = -1;
@@ -151,7 +166,9 @@
                             if (!(value.match(regexObj.space) || value.match(regexObj.chinese))) {
                                 var valueLength = value.length
                                 if (valueLength <= 16 && valueLength >= 8) {
-                                    result = true
+                                    if (!(document.querySelector('#password-verify').classList[0] === 'true') && !(document.querySelector('#password-verify').value === value)) {
+                                        result = true
+                                    }
                                 }
                             }
                         }()
