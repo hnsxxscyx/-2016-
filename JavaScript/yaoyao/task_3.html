@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>fds </title>
+    <style>
+        .hide {
+            display: none;
+        }
+        
+        ul {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <input type="radio" id="student" name='student-choose'>
+        <label for="student">在校生</label>
+        <input type="radio" id="not-student" name='student-choose'>
+        <label for="not-student">非在校生</label>
+        <div class="strdent-choose">
+            <label for="">学校</label>
+
+            <div class="dropdown hide">
+                <ul class="university-city">
+                    <li>北京</li>
+                    <li>郑州</li>
+                </ul>
+                <ul class="university">
+                </ul>
+            </div>
+        </div>
+
+    </form>
+    <script>
+        var qs = function(selector) {
+            return document.querySelector(selector)
+        }
+    </script>
+</body>
+
+</html>
