@@ -14,16 +14,85 @@
             margin-top: 20vh;
             background: url("bc.jpg") center no-repeat;
             background-size: cover;
+            overflow: hidden;
+            position: relative;
         }
         
-        #target:hover {
+        .target-content {
+            opacity: 0;
+            margin-left: 10vw;
+            margin-top: 10%;
+            position: absolute;
+        }
+        
+        #target:hover::before {
+            background: url("bc.jpg") center no-repeat;
+            background-size: cover;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40vw;
+            height: 40vh;
+            filter: blur(3px);
+        }
+        /*#target:hover {
             filter: blur(1px);
+        }*/
+        
+        #target:hover>.target-content {
+            opacity: 1;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        /*边框方法参见http://demo.htmleaf.com/1509/201509191634/index.html*/
+        
+        .target-content::after,
+        .target-content::before {
+            box-sizing: border-box;
+            transform-origin: center;
+            content: '';
+            position: absolute;
+            width: 18vw;
+            height: 18vh;
+        }
+        
+        .target-content::before {
+            border-top: 2px solid #6477b9;
+            border-bottom: 2px solid #6477b9;
+            -webkit-transform: scale3d(0, 1, 1);
+            transform: scale3d(0, 1, 1);
+        }
+        
+        .target-content::after {
+            border-left: 2px solid #6477b9;
+            border-right: 2px solid #6477b9;
+            top: 0;
+            transform: scale3d(1, 0, 1);
+        }
+        
+        #target:hover .target-content:before,
+        #target:hover .target-content::after {
+            transform: scale3d(1, 1, 1);
+            transition: transform 1s;
+        }
+        
+        .target-content>p {
+            background-image: -webkit-linear-gradient(left, #147B96, #E6D205 25%, #147B96 50%, #E6D205 75%, #147B96);
+            color: transparent;
+            background-clip: text;
+            font-size: 26px;
         }
     </style>
 </head>
 
 <body>
     <div id="target">
+        <div class="target-content">
+            <p>欢迎来到火影世界</p>
+            <p>点击查看</p>
+        </div>
     </div>
 </body>
 
