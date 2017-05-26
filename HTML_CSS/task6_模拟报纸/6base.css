@@ -1,219 +1,264 @@
-body{
-	width: 980px;
-	height: 1386px;
-	background: #FFFFFF;
-	margin: 0 auto;
-	margin-top: 0;
-}
-header,section,footer{
-	padding: 0 44px 0;
-}
-header>div:first-child{
-	background-color: #D55D5C;
-	height: 61px;
-	width: 110px;
-	vertical-align: bottom;
-}
-header>div{
-	display: inline-block;
-	vertical-align: bottom;
-}
-header>div>p{
-	display: inline;
-	vertical-align: bottom;
-	margin: 0 0 2px 2px;
-}
-#q{
-	width: 782px;
-}
-#q>p:first-child{
-	position: relative;
-	left: -110px;
-}
-#q>p:last-child{
-	float: right;
+body {
+    width: 980px;
+    height: 1386px;
+    background: #FFFFFF;
+    margin: 0 auto;
+    margin-top: 0;
 }
 
-section{
-	margin: 20px 0 0;
+header,
+section,
+footer {
+    padding: 0 44px 0;
 }
-#first{
-	position: relative;
+
+header>div:first-child {
+    background-color: #D55D5C;
+    height: 61px;
+    width: 110px;
+    vertical-align: bottom;
 }
-.green{
-	background: rgba(157,190,159,0.5);
-	width: 191px;
-	height: 300px;
-	position: absolute;
+
+header>div {
+    display: inline-block;
+    vertical-align: bottom;
 }
-.red{
-	background: rgba(229,183,183,0.5);
-	width: 191px;
-	height: 300px;
-	position: absolute;
-	left: 448px;
-	/*感觉总是多出来一点所以缩小了几像素*/
+
+header>div>p {
+    display: inline;
+    vertical-align: bottom;
+    margin: 0 0 2px 2px;
 }
-#first>img:first-child{
-	width: 641px;
-	height: 301px;
+
+#q {
+    width: 782px;
 }
+
+#q>p:first-child {
+    position: relative;
+    left: -110px;
+}
+
+#q>p:last-child {
+    float: right;
+}
+
+section {
+    margin: 20px 0 0;
+}
+
+#first {
+    position: relative;
+}
+
+.green {
+    background: rgba(157, 190, 159, 0.5);
+    width: 191px;
+    height: 300px;
+    position: absolute;
+}
+
+.red {
+    background: rgba(229, 183, 183, 0.5);
+    width: 191px;
+    height: 300px;
+    position: absolute;
+    left: 448px;
+    /*感觉总是多出来一点所以缩小了几像素*/
+}
+
+#first>img:first-child {
+    width: 641px;
+    height: 301px;
+}
+
+
 /*#first>img:before{
 	content: "";
 	width: 191px;
 	height: 301px;
 	background-color: rgba(228,182,182,0.5);
 }*/
-#first>.about>hr{
-	margin: 0;
+
+#first>.about>hr {
+    margin: 0;
 }
-.inline_box{
+
+.inline_box {
     display: inline-block;
-} 
-.right_css_text>p{
-	margin: 0;
-}
-.about{
-	width: 203px;
-	height: 301px;
-	float: right;
-}
-.about>div:last-child{
-	position: absolute;
-	bottom: 0px;
 }
 
-#way{
-	width: 641px;
-	position: relative;
+.right_css_text>p {
+    margin: 0;
 }
 
-#way>div:nth-child(1){
-	width: 230px;
-	float: left;
+.about {
+    width: 203px;
+    height: 301px;
+    float: right;
 }
+
+.about>div:last-child {
+    position: absolute;
+    bottom: 0px;
+}
+
+#way {
+    width: 641px;
+    position: relative;
+}
+
+#way>div:nth-child(1) {
+    width: 230px;
+    float: left;
+}
+
+
 /*n不是从0开始*/
-#way>div:nth-child(2){
-	width: 200px;
-	margin: 0 30.5px;
-}
-#way>div:nth-child(3){
-	width: 150px;
-	float: right;
-}
-#way>div:nth-child(3)>ol{
-	text-indent: 5px;
-	list-style: none;
-	padding: 0;
-	position: absolute;
-	bottom: 0px;
-	/*为什么父元素的父元素设置relative会使其生效？*/
+
+#way>div:nth-child(2) {
+    width: 200px;
+    margin: 0 30.5px;
 }
 
-.location{
-	position: relative;
-}
-.last_left{
-	width: 415px;
-}
-.last_left>h1{
-	margin: 8px 0 8px;
-}
-.last_left img{
-	float: right;
-	margin: 10px;
-}
-.last_left p{
-	margin: 0;
-}
-.last_right{
-	width: 458px;
-	float: right;
-}
-.img_text{
-	position: relative;
-}
-.img_text>img{
-	width: 458px;
-	height: 275px;
-	display: block;
-}
-.img_text>div{
-	background: rgba(0,0,0,0.3);
-	width: 431px;
-	/*减掉下面的padding*/
-	height: 61px;
-	padding-left: 26px;
-	position: absolute;
-	bottom: 0px;
-	/*消除图片下空白https://www.zhihu.com/question/21558138*/
-}
-.img_text p{
-	line-height: 61px;
-	margin: 0;
-	margin-left: 10px;
-}
-.img_text hr{
-	display: inline-block;
-	margin: 0;
-	margin-top: 8.5px;
-	float: left;
+#way>div:nth-child(3) {
+    width: 150px;
+    float: right;
 }
 
-#list{
-	width: 459px;
-	height: 318px;
-	background-color: #EEEED6;
-	position: absolute;
-	bottom: 0px;
+#way>div:nth-child(3)>ol {
+    text-indent: 5px;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    bottom: 0px;
+    /*为什么父元素的父元素设置relative会使其生效？*/
 }
-#list>div:first-of-type{
-	display: inline-block;
-	width: 260px;
-	height: 160px;
-	background: #D55D5C;
-	position: absolute;
-	bottom: 0px;
+
+.location {
+    position: relative;
 }
-#list>div:first-of-type>div{
-	width: 170px;
-	/*不造怎么上去，只好用这种笨方法*/
-	height: 86px;
+
+.last_left {
+    width: 415px;
 }
-#list>div:first-of-type hr{
-	width: 2px;
-	height: 86px;
-	display: inline-block;
-	margin: 0;
+
+.last_left>h1 {
+    margin: 8px 0 8px;
 }
-#list>div:first-of-type p{
-	display: inline-block;
-	margin: 0;
+
+.last_left img {
+    float: right;
+    margin: 10px;
 }
-#list>div:first-of-type h3{
-	display: inline-block;
-	margin: 0;
+
+.last_left p {
+    margin: 0;
 }
+
+.last_right {
+    width: 458px;
+    float: right;
+}
+
+.img_text {
+    position: relative;
+}
+
+.img_text>img {
+    width: 458px;
+    height: 275px;
+    display: block;
+}
+
+.img_text>div {
+    background: rgba(0, 0, 0, 0.3);
+    width: 431px;
+    /*减掉下面的padding*/
+    height: 61px;
+    padding-left: 26px;
+    position: absolute;
+    bottom: 0px;
+    /*消除图片下空白https://www.zhihu.com/question/21558138*/
+}
+
+.img_text p {
+    line-height: 61px;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.img_text hr {
+    display: inline-block;
+    margin: 0;
+    margin-top: 8.5px;
+    float: left;
+}
+
+#list {
+    width: 459px;
+    height: 318px;
+    background-color: #EEEED6;
+    position: absolute;
+    bottom: 0px;
+}
+
+#list>div:first-of-type {
+    display: inline-block;
+    width: 260px;
+    height: 160px;
+    background: #D55D5C;
+    position: absolute;
+    bottom: 0px;
+}
+
+#list>div:first-of-type>div {
+    width: 170px;
+    /*不造怎么上去，只好用这种笨方法*/
+    height: 86px;
+}
+
+#list>div:first-of-type hr {
+    width: 2px;
+    height: 86px;
+    display: inline-block;
+    margin: 0;
+}
+
+#list>div:first-of-type p {
+    display: inline-block;
+    margin: 0;
+}
+
+#list>div:first-of-type h3 {
+    display: inline-block;
+    margin: 0;
+}
+
+
 /* 像这些如何批量写？ */
-#list>div:last-of-type{
-	display: inline-block;
-	width: 199px;
-	height: 160px;
-	position: absolute;
-	bottom: 0px;
-	right: 0px;
-}
-#list>div:last-of-type p{
-	padding: 10px;
+
+#list>div:last-of-type {
+    display: inline-block;
+    width: 199px;
+    height: 160px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
 }
 
-footer>p{
-	float: right;
-	margin: 0;
+#list>div:last-of-type p {
+    padding: 10px;
 }
-footer>hr{
-	width: 892px;
-	height: 1px;
-	margin: 0;
-	margin-top: 30px;
+
+footer>p {
+    float: right;
+    margin: 0;
+}
+
+footer>hr {
+    width: 892px;
+    height: 1px;
+    margin: 0;
+    margin-top: 30px;
 }
