@@ -28,17 +28,19 @@
 
 
     function getDirection() {
-        let direction,
+        let direction = '',
             degree = chess.degree
         while (degree < 0) {
             degree += 360
         }
-        if (degree % 270 === 0) {
-            direction = 'left'
-        } else if (degree % 180 === 0) {
-            direction = 'back'
-        } else if (degree % 90 === 0) {
-            direction = 'right'
+        if (degree !== 0) {
+            if (degree % 360 === 270) {
+                direction = 'left'
+            } else if (degree % 360 === 180) {
+                direction = 'back'
+            } else if (degree % 90 === 0) {
+                direction = 'right'
+            }
         }
         return direction
     }
@@ -58,10 +60,13 @@
         }
         if (final < 11) {
             final += 110
+        } else if (final > 120) {
+            final -= 110
         }
+        console.log(final)
         var $chess = document.querySelector('#chess')
+        let ele = document.querySelectorAll('td')[x * 10 + y].innerHTML
         $chess.parentNode.removeChild($chess)
-        let ele = "<div id='chess' class='" + direction + "'><div class='blue'></div></div>"
         document.querySelectorAll('td')[final].innerHTML = ele
         chess.y = final % 10
         chess.x = Math.floor(final / 10)
@@ -84,6 +89,7 @@
                 break
         }
         chess.degree = degree
+        console.log(degree)
         chessStyle.setProperty('transform', 'rotate(' + degree + 'deg)')
     }
 
