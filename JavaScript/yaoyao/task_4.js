@@ -1,9 +1,9 @@
 + function() {
-    class chess {
-        constructor() {
-            this.x = 0
-            this.y = 0
-            this.degree = 0
+    class Chess {
+        constructor(x, y, deg) {
+            this.x = x
+            this.y = y
+            this.degree = deg
         };
     }
 
@@ -24,12 +24,23 @@
         document.querySelectorAll('td')[x * 10 + y].innerHTML = ele
         chess.x = x
         chess.y = y
-        chess.degree = 0
     }
 
 
     function getDirection() {
-        return document.querySelector('#chess').className
+        let direction,
+            degree = chess.degree
+        while (degree < 0) {
+            degree += 360
+        }
+        if (degree % 270 === 0) {
+            direction = 'left'
+        } else if (degree % 180 === 0) {
+            direction = 'back'
+        } else if (degree % 90 === 0) {
+            direction = 'right'
+        }
+        return direction
     }
 
     function move(direction) {
@@ -79,6 +90,7 @@
     // function getCommand() {
     //     return document.querySelector('#input').value
     // }
+    let chess = new Chess(0, 0, 0)
     startNewPiece()
     let monitorInput = document.getElementById('input').addEventListener('keydown', function(event) {
         if (event.keyCode === 13) {
