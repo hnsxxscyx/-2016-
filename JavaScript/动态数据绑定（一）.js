@@ -3,8 +3,13 @@ function Observer(obj) {
     proxy.data = new Proxy(obj, {
         get: function(target, property) {
             if (property in target) {
-                console.log('你访问了' + property)
-                return target[property]
+                if (typeof property === 'object') {
+
+                } else {
+                    console.log('你访问了' + property)
+                    return target[property]
+                }
+
             } else {
                 console.log('没有' + property)
             }
