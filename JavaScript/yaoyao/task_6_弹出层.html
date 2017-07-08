@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .modal {
+            width: 100vw;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.3);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .close {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button id='open'>弹出弹出层</button>
+    <div class='modal close'>
+        <div class='modal-content'>
+            <div class="modal-header">浮出层就是我</div>
+            <div class="modal-body">我就是浮出层</div>
+            <div class="modal-footer">
+                <button>确定</button>
+                <button>取消</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        + function() {
+            let $modal = document.querySelector('.modal')
+
+            function modalToggle() {
+                $modal.classList.toggle('close')
+            }
+
+            function hasClass(obj, name) {
+                let list = obj.classList,
+                    result = false
+                for (let i = 0; i < list.length; i++) {
+                    if (list[i] === name) {
+                        result = true
+                    }
+                }
+                return result
+            }
+            let buttonToggle = []
+            let $button = document.getElementsByTagName('button')
+            for (let i = 0; i < $button.length; i++) {
+                buttonToggle[i] = $button[i].addEventListener('click', function(event) {
+                    modalToggle()
+                })
+            }
+            let modalClick = $modal.addEventListener('click', function(event) {
+                //classList不是标准数组，所以不能用indexOf
+                if (hasClass(event.target, 'modal')) {
+                    modalToggle()
+                }
+            })
+        }()
+    </script>
+</body>
+
+</html>
