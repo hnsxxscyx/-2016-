@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .private input[type='checkbox'],
+        .png input[type='checkbox'] {
+            display: none;
+        }
+        
+        .private .checkbox-label::before {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            vertical-align: middle;
+            border: 1px solid red;
+            border-radius: 16px;
+        }
+        
+        .private input[type='checkbox']:checked+.checkbox-label::before {
+            content: '●';
+            text-align: center;
+            color: red;
+            line-height: 10px;
+        }
+        
+        .png .checkbox-label {
+            display: inline-block;
+            position: relative;
+            width: 16px;
+            height: 16px;
+            background: url(http://ww1.sinaimg.cn/large/006HJ39wgy1fhh60m5scqj305i0fyt8l.jpg) no-repeat;
+            background-size: 16px auto;
+            background-position: 0% 105%;
+        }
+        
+        .png .checkbox-label::after {
+            content: attr(data-content);
+            display: inline-block;
+            width: 100vw;
+            height: 16px;
+            margin-left: 16px;
+        }
+        
+        .png input[type='checkbox']:checked~.checkbox-label {
+            background-position: 0% 0%;
+        }
+        
+        .png input[type='checkbox']:hover~.checkbox-label {
+            background-position: 0% 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <p><label for="normal"><input type="checkbox" id="normal">这是普通checkbox样式</label></p>
+    <div class='private'>
+        <p><input type="checkbox" id="private-style"><label for="private-style" class="checkbox-label">这是自定义的css样式</label></p>
+        <p><input type="checkbox" id="private-style1"><label for="private-style1" class="checkbox-label">这是自定义的css样式</label></p>
+    </div>
+    <div class='png'>
+        <p><input type="checkbox" id="png-style1"><label for="png-style1" class="checkbox-label" data-content='这是自定义的雪碧图样式'></label></p>
+        <p><input type="checkbox" id="png-style2"><label for="png-style2" class="checkbox-label" data-content='这是自定义的雪碧图样式'></label></p>
+    </div>
+
+</body>
+
+</html>
